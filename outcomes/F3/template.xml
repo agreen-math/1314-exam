@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    <intro>
+        <p>
+            A student was asked to simplify the expression <m>{{original_expr}}</m> using properties of logarithms. They mistakenly wrote <m>{{mistake_expr}}</m>. Correct the student's answer.
+        </p>
+    </intro>
+    <content>
+        <p>
+            <m>{{original_expr}} = </m> ____________________
+        </p>
+    </content>
+    <outtro>
+        <p>Solution</p>
+        <p>
+            <m>{{original_expr}} = {{correct_expr}}</m>
+        </p>
+    </outtro>
+</knowl>

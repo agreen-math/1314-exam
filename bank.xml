@@ -100,5 +100,28 @@ Sketching Quadratic Functions
 Transformations of Functions
             </description>
         </outcome>
-    </outcomes>
+        <outcome>
+            <title>Exp to Log Form</title>
+            <slug>F1</slug>
+            <path>outcomes/F1</path>
+            <description>
+Convert between exponential and logarithmic forms
+            </description>
+        </outcome>
+        <outcome>
+            <title>Log Prop Expand</title>
+            <slug>F2</slug>
+            <path>outcomes/F2</path>
+            <description>
+Expand logarithmic expressions using properties of logarithms.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Log Prop Error</title>
+            <slug>F3</slug>
+            <path>outcomes/F3</path>
+            <description>
+Identify and correct errors in logarithmic expressions.
+            </description>
+        </outcome>    </outcomes>
 </bank>

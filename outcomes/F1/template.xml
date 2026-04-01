@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    <intro>
+        <p>Fill in the table to give an equivalent equation in the specified form.</p>
+    </intro>
+    <content>
+        <p>
+            <me>
+                \begin{array}{|c|c|}
+                    \hline
+                    \rule[-0.8em]{0pt}{2.2em} \textbf{Exponential Form} &amp; \textbf{Logarithmic Form} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} {{q1_exp}} &amp; {{q1_log}} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} {{q2_exp}} &amp; {{q2_log}} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} {{q3_exp}} &amp; {{q3_log}} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} {{q4_exp}} &amp; {{q4_log}} \\ \hline
+                \end{array}
+            </me>
+        </p>
+    </content>
+    <outtro>
+        <p>Solution</p>
+        <p>
+            <me>
+                \begin{array}{|c|c|}
+                    \hline
+                    \rule[-0.8em]{0pt}{2.2em} \textbf{Exponential Form} &amp; \textbf{Logarithmic Form} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} {{a1_exp}} &amp; {{a1_log}} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} {{a2_exp}} &amp; {{a2_log}} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} {{a3_exp}} &amp; {{a3_log}} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} {{a4_exp}} &amp; {{a4_log}} \\ \hline
+                \end{array}
+            </me>
+        </p>
+    </outtro>
+</knowl>
