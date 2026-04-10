@@ -11,10 +11,8 @@
         </content>
         <outtro>
             <p>Solution</p>
-            <p>{{domain_expl_a}}</p>
             <p><me>{{domain_math_a}}</me></p>
             <p>domain: <m>\boxed{ {{ans_domain_a}} }</m></p>
-            <p>{{range_expl_a}}</p>
             <p><me>{{range_math_a}}</me></p>
             <p>range: <m>\boxed{ {{ans_range_a}} }</m></p>
         </outtro>
@@ -27,10 +25,8 @@
         </content>
         <outtro>
             <p>Solution</p>
-            <p>{{domain_expl_b}}</p>
             <p><me>{{domain_math_b}}</me></p>
             <p>domain: <m>\boxed{ {{ans_domain_b}} }</m></p>
-            <p>{{range_expl_b}}</p>
             <p><me>{{range_math_b}}</me></p>
             <p>range: <m>\boxed{ {{ans_range_b}} }</m></p>
         </outtro>

@@ -1,67 +1,89 @@
 from sage.all import *
-from random import randint
+from random import randint, choice, sample
 
 class Generator(BaseGenerator):
     def data(self):
-        # 1. Generate integer solutions
-        x = randint(-9, 9)
-        y = randint(-9, 9)
-
-        # 2. Set parameters to strictly enforce a 4-step Gauss-Jordan elimination with no fractions
-        c = 1  # Bottom left must be 1 so a simple row swap guarantees a leading 1
+        # 1. Generate Cubic Function Data
+        roots = sample(range(-5, 6), 3)
+        factors = []
+        for r in roots:
+            if r == 0:
+                factors.insert(0, "x")
+            elif r < 0:
+                factors.append(f"(x + {-r})")
+            else:
+                factors.append(f"(x - {r})")
+        cub_expr = "".join(factors)
         
-        a = 0
-        while a in [0, 1, -1]:
-            a = randint(-6, 6)
-            
-        d = 0
-        while d == 0:
-            d = randint(-5, 5)
-            
-        k = 0
-        while k in [0, 1, -1]:
-            k = randint(-6, 6)
-            
-        # 3. Calculate remaining matrix elements backwards from the solution
-        b = k + a * d
-        f = x + d * y
-        e = a * x + b * y
+        cubic_data = {
+            "expr": cub_expr,
+            "ans_domain": "(-\\infty, \\infty)",
+            "ans_range": "(-\\infty, \\infty)",
+            "domain_expl": "Polynomial functions do not have division by zero or even roots, so their domain is all real numbers.",
+            "domain_math": "\\text{Domain: } (-\\infty, \\infty)",
+            "range_expl": "Since this is an odd-degree polynomial (a cubic), its ends point in opposite directions, meaning the range is also all real numbers.",
+            "range_math": "\\text{Range: } (-\\infty, \\infty)"
+        }
         
-        # --- Matrix String Definitions ---
-        M0 = f"\\left[\\begin{{array}}{{cc|c}}\n{a} & {b} & {e} \\\\\n{c} & {d} & {f}\n\\end{{array}}\\right]"
-        M1 = f"\\left[\\begin{{array}}{{cc|c}}\n{c} & {d} & {f} \\\\\n{a} & {b} & {e}\n\\end{{array}}\\right]"
-        M2 = f"\\left[\\begin{{array}}{{cc|c}}\n{c} & {d} & {f} \\\\\n0 & {k} & {k*y}\n\\end{{array}}\\right]"
-        M3 = f"\\left[\\begin{{array}}{{cc|c}}\n{c} & {d} & {f} \\\\\n0 & 1 & {y}\n\\end{{array}}\\right]"
-        M4 = f"\\left[\\begin{{array}}{{cc|c}}\n1 & 0 & {x} \\\\\n0 & 1 & {y}\n\\end{{array}}\\right]"
+        # 2. Generate Rational Function Data
+        a = choice([1, 2, 3, 4, 5])
+        b = choice([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5])
+        c = choice([2, 3, 4, 5])
+        d = choice([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5])
         
-        # --- Operation String Definitions ---
-        op1 = "R_1 \\leftrightarrow R_2"
+        # Ensure numerator and denominator don't share a common factor
+        while a*d + b == 0:  
+            b = choice([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5])
         
-        if a > 0:
-            op2 = f"R_2 - {a}R_1 \\to R_2"
+        num_a = "" if a == 1 else str(a)
+        num_b = f" + {b}" if b > 0 else f" - {-b}"
+        num_str = f"{num_a}x{num_b}"
+        
+        den_d = f" - {d}" if d > 0 else f" + {-d}"
+        den_str = f"{c}(x{den_d})"
+        
+        rat_expr = f"\\displaystyle \\frac{{{num_str}}}{{{den_str}}}"
+        
+        # Evaluate horizontal asymptote fraction cleanly
+        frac = Rational(a, c)
+        if frac.denominator() == 1:
+            rat_range_str = f"{frac.numerator()}"
+            ha_calc = f"y = \\frac{{{a}}}{{{c}}} = {rat_range_str}"
         else:
-            op2 = f"R_2 + {-a}R_1 \\to R_2"
-            
-        op3 = f"\\frac{{R_2}}{{{k}}} \\to R_2"
+            rat_range_str = f"\\frac{{{frac.numerator()}}}{{{frac.denominator()}}}"
+            if a == frac.numerator() and c == frac.denominator():
+                ha_calc = f"y = \\frac{{{a}}}{{{c}}}"
+            else:
+                ha_calc = f"y = \\frac{{{a}}}{{{c}}} = {rat_range_str}"
+                
+        rat_data = {
+            "expr": rat_expr,
+            "ans_domain": f"x \\neq {d}",
+            "ans_range": f"y \\neq {rat_range_str}",
+            "domain_expl": "The domain is restricted by the denominator, which cannot equal zero.",
+            "domain_math": f"x {den_d} \\neq 0 \\implies x \\neq {d}",
+            "range_expl": "The range is restricted by the horizontal asymptote, which is the ratio of the leading coefficients.",
+            "range_math": f"{ha_calc} \\implies y \\neq {rat_range_str}"
+        }
         
-        if d > 0:
-            op4 = f"R_1 - {d}R_2 \\to R_1"
-        else:
-            op4 = f"R_1 + {-d}R_2 \\to R_1"
-            
-        # --- Build Aligned Solution Steps ---
-        solution_steps = (
-            f"\\begin{{aligned}}\n"
-            f"& {M0} \\\\\n"
-            f"\\xrightarrow{{{op1}}} & {M1} \\\\\n"
-            f"\\xrightarrow{{{op2}}} & {M2} \\\\\n"
-            f"\\xrightarrow{{{op3}}} & {M3} \\\\\n"
-            f"\\xrightarrow{{{op4}}} & {M4}\n"
-            f"\\end{{aligned}}"
-        )
+        # 3. Shuffle and Assign to parts (a) and (b)
+        items = [cubic_data, rat_data]
+        shuffle(items)
         
         return {
-            "initial_matrix": M0,
-            "solution_steps": solution_steps,
-            "ans": f"({x}, {y})"
+            "expr_a": items[0]["expr"],
+            "ans_domain_a": items[0]["ans_domain"],
+            "ans_range_a": items[0]["ans_range"],
+            "domain_expl_a": items[0]["domain_expl"],
+            "domain_math_a": items[0]["domain_math"],
+            "range_expl_a": items[0]["range_expl"],
+            "range_math_a": items[0]["range_math"],
+            
+            "expr_b": items[1]["expr"],
+            "ans_domain_b": items[1]["ans_domain"],
+            "ans_range_b": items[1]["ans_range"],
+            "domain_expl_b": items[1]["domain_expl"],
+            "domain_math_b": items[1]["domain_math"],
+            "range_expl_b": items[1]["range_expl"],
+            "range_math_b": items[1]["range_math"]
         }

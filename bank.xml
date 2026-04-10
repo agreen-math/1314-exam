@@ -109,19 +109,108 @@ Convert between exponential and logarithmic forms
             </description>
         </outcome>
         <outcome>
-            <title>Log Prop Expand</title>
+            <title>Log Prop</title>
             <slug>F2</slug>
             <path>outcomes/F2</path>
             <description>
-Expand logarithmic expressions using properties of logarithms.
+Expand and condense logarithmic expressions using properties of logarithms.
             </description>
         </outcome>
         <outcome>
-            <title>Log Prop Error</title>
+            <title>Solve Exp Like Bases</title>
             <slug>F3</slug>
             <path>outcomes/F3</path>
             <description>
-Identify and correct errors in logarithmic expressions.
+Solve exponential equations with like bases.
             </description>
-        </outcome>    </outcomes>
+        </outcome>
+        <outcome>
+            <title>Solve Log w Prop</title>
+            <slug>F4</slug>
+            <path>outcomes/F4</path>
+            <description>
+Solve logarithmic equations using properties of logarithms.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Solve Log w 1-1</title>
+            <slug>F5</slug>
+            <path>outcomes/F5</path>
+            <description>
+Solve logarithmic equations using the one-to-one property.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Exp Log App</title>
+            <slug>F6</slug>
+            <path>outcomes/F6</path>
+            <description>
+Solve application problems involving exponential and logarithmic functions.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Graph Log</title>
+            <slug>F7</slug>
+            <path>outcomes/F7</path>
+            <description>
+Graph logarithmic functions.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Graph Exp</title>
+            <slug>F8</slug>
+            <path>outcomes/F8</path>
+            <description>
+Graph exponential functions.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Word System</title>
+            <slug>F9</slug>
+            <path>outcomes/F9</path>
+            <description>
+Solve word problems involving systems of equations.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Write Matrix</title>
+            <slug>F10</slug>
+            <path>outcomes/F10</path>
+            <description>
+Write matrices for systems of equations.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Solve System</title>
+            <slug>F11</slug>
+            <path>outcomes/F11</path>
+            <description>
+Use row operations to solve systems of equations.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Domain Range</title>
+            <slug>F12</slug>
+            <path>outcomes/F12</path>
+            <description>
+Find the domain and range of functions.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Rational Asymp</title>
+            <slug>F13</slug>
+            <path>outcomes/F13</path>
+            <description>
+Find asymptotes of rational functions.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Poly Zeros</title>
+            <slug>F14</slug>
+            <path>outcomes/F14</path>
+            <description>
+Find the zeros of polynomial functions.
+            </description>
+        </outcome>
+    </outcomes>
 </bank>

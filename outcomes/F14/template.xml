@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    <intro>
+        <p>List all of the vertical, horizontal, and oblique asymptotes of <m>f(x)</m>.</p>
+        <p><me>f(x) = {{expr}}</me></p>
+    </intro>
+    <content>
+        <p>
+            <me>
+                \begin{array}{|c|c|}
+                    \hline
+                    \rule[-0.8em]{0pt}{2.2em} \textbf{Asymptotes} &amp; \textbf{Equation} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} \text{Vertical} &amp; \text{\hspace{4cm}} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} \text{Horizontal} &amp; \text{\hspace{4cm}} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} \text{Oblique} &amp; \text{\hspace{4cm}} \\ \hline
+                \end{array}
+            </me>
+        </p>
+    </content>
+    <outtro>
+        <p>Solution</p>
+        <p>
+            <me>
+                \begin{array}{|c|c|}
+                    \hline
+                    \rule[-0.8em]{0pt}{2.2em} \textbf{Asymptotes} &amp; \textbf{Equation} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} \text{Vertical} &amp; {{va_ans}} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} \text{Horizontal} &amp; {{ha_ans}} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} \text{Oblique} &amp; {{oa_ans}} \\ \hline
+                \end{array}
+            </me>
+        </p>
+    </outtro>
+</knowl>
