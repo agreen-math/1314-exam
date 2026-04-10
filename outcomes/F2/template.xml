@@ -1,22 +1,30 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
     <intro>
-        <p>
-            Using the properties of logarithms, rewrite the expression as the sum or difference of logarithms. Express all powers as factors.
-        </p>
+        <p>Use properties of logarithms to expand or condense the logarithmic expression as specified.</p>
     </intro>
-    <content>
-        <p>
-            <me>{{problem}}</me>
-        </p>
-    </content>
-    <outtro>
-        <p>Solution</p>
-        <p>
-            <me>{{step1}}</me>
-        </p>
-        <p>
-            <me>\boxed{ {{final_ans}} }</me>
-        </p>
-    </outtro>
+    <knowl>
+        <content>
+            <p>(a) Rewrite as the sum or difference of logarithms. Express all powers as factors.</p>
+            <p><me>{{expr_a}}</me></p>
+        </content>
+        <outtro>
+            <p>Solution</p>
+            <p><me>{{step1_a}}</me></p>
+            <p><me>{{step2_a}}</me></p>
+            <p><me>\boxed{ {{ans_a}} }</me></p>
+        </outtro>
+    </knowl>
+    <knowl>
+        <content>
+            <p>(b) Rewrite as a single logarithm. Express all factors as powers.</p>
+            <p><me>{{expr_b}}</me></p>
+        </content>
+        <outtro>
+            <p>Solution</p>
+            <p><me>{{step1_b}}</me></p>
+            <p><me>{{step2_b}}</me></p>
+            <p><me>\boxed{ {{ans_b}} }</me></p>
+        </outtro>
+    </knowl>
 </knowl>

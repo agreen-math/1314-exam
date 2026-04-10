@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    <intro>
+        <p>Find the domain and range for each of the following functions.</p>
+    </intro>
+    <knowl>
+        <content>
+            <p>(a) <m>g(x) = {{expr_a}}</m></p>
+            <p>domain: ____________________</p>
+            <p>range: ____________________</p>
+        </content>
+        <outtro>
+            <p>Solution</p>
+            <p>{{domain_expl_a}}</p>
+            <p><me>{{domain_math_a}}</me></p>
+            <p>domain: <m>\boxed{ {{ans_domain_a}} }</m></p>
+            <p>{{range_expl_a}}</p>
+            <p><me>{{range_math_a}}</me></p>
+            <p>range: <m>\boxed{ {{ans_range_a}} }</m></p>
+        </outtro>
+    </knowl>
+    <knowl>
+        <content>
+            <p>(b) <m>h(x) = {{expr_b}}</m></p>
+            <p>domain: ____________________</p>
+            <p>range: ____________________</p>
+        </content>
+        <outtro>
+            <p>Solution</p>
+            <p>{{domain_expl_b}}</p>
+            <p><me>{{domain_math_b}}</me></p>
+            <p>domain: <m>\boxed{ {{ans_domain_b}} }</m></p>
+            <p>{{range_expl_b}}</p>
+            <p><me>{{range_math_b}}</me></p>
+            <p>range: <m>\boxed{ {{ans_range_b}} }</m></p>
+        </outtro>
+    </knowl>
+</knowl>

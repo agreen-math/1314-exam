@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    <intro>
+        <p>Solve the following system using row operations on matrices.</p>
+    </intro>
+    <content>
+        <p><me>{{initial_matrix}}</me></p>
+    </content>
+    <outtro>
+        <p>Solution</p>
+        <p><me>{{solution_steps}}</me></p>
+        <p><m>\boxed{ {{ans}} }</m></p>
+    </outtro>
+</knowl>

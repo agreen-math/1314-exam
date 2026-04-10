@@ -1,57 +1,96 @@
 from sage.all import *
-from random import randint, choice, sample
+from random import randint, choice
 
 class Generator(BaseGenerator):
     def data(self):
-        # 1. Randomize the Base
-        base_type = choice(['log', 'ln', 'custom'])
-        if base_type == 'log':
-            log_fmt = r"\log"
-        elif base_type == 'ln':
-            log_fmt = r"\ln"
+        x = var('x')
+        
+        # 1. Randomize Base
+        b_val = choice([2, 3, 4, 5, 6, 7, 8, 9, 'e'])
+        b_str = 'e' if b_val == 'e' else str(b_val)
+            
+        # 2. Randomize linear exponents
+        while True:
+            # Half the time, generate a simple case (like the screenshot)
+            if choice([True, False]):
+                c1 = choice([-4, -3, -2, 2, 3, 4])
+                c2 = choice([-4, -3, -2, -1, 1, 2, 3, 4])
+                d1, d2 = 0, 0
+                d3 = randint(1, 3)
+            # Half the time, generate a case with constants in the exponents
+            else:
+                c1 = choice([-3, -2, -1, 1, 2, 3])
+                c2 = choice([-3, -2, -1, 1, 2, 3])
+                d1 = randint(-4, 4)
+                d2 = randint(-4, 4)
+                d3 = randint(-4, 4)
+            
+            # Ensure the x terms don't cancel out so the equation is solvable
+            cx = c1 + c2
+            if cx != 0:
+                break
+                
+        p1 = c1*x + d1
+        p2 = c2*x + d2
+        p3 = d3 # Keep RHS exponent a constant
+        
+        # --- Format RHS ---
+        if p3 == 0:
+            rhs_str = "1"
+        elif p3 == 1:
+            rhs_str = b_str
         else:
-            b = choice([2, 3, 4, 5, 'a', 'b', 'c'])
-            log_fmt = f"\\log_{{{b}}}"
-
-        # 2. Randomize the Arguments (Single terms with coefficients)
-        v1, v2 = sample(['x', 'y', 'w', 'z'], 2)
-        m = randint(2, 8)
-        n = randint(2, 8)
-        
-        A = f"{m}{v1}"
-        B = f"{n}{v2}"
-        
-        # 3. Pick the Error Scenario
-        error_type = choice(['quotient', 'product', 'power'])
-        
-        if error_type == 'quotient':
-            # Prompt: log(A) - log(B)
-            original_expr = f"{log_fmt}({A}) - {log_fmt}({B})"
-            # Mistake: log(A) / log(B)
-            mistake_expr = f"\\dfrac{{{log_fmt}({A})}}{{{log_fmt}({B})}}"
-            # Correct: log(A / B)
-            correct_expr = f"{log_fmt}\\left(\\dfrac{{{A}}}{{{B}}}\\right)"
+            rhs_str = f"{b_str}^{{{p3}}}"
             
-        elif error_type == 'product':
-            # Prompt: log(A) + log(B)
-            original_expr = f"{log_fmt}({A}) + {log_fmt}({B})"
-            # Mistake: log(A) * log(B)
-            mistake_expr = f"{log_fmt}({A}) \\cdot {log_fmt}({B})"
-            # Correct: log(A * B)
-            correct_expr = f"{log_fmt}({m*n}{v1}{v2})"
+        # --- Format LHS and Problem ---
+        lhs_str = f"{b_str}^{{{latex(p1)}}} \\cdot {b_str}^{{{latex(p2)}}}"
+        problem_expr = f"{lhs_str} = {rhs_str}"
+        
+        # --- Format sum string carefully to avoid ugly "+ -x" situations ---
+        p1_str = latex(p1)
+        p2_str = latex(p2)
+        if p2_str.startswith('-'):
+            exp_sum_str = f"{p1_str}{p2_str}"
+        else:
+            exp_sum_str = f"{p1_str}+{p2_str}"
             
-        else: 
-            # Power Error Scenario
-            c = randint(2, 4)
-            # Prompt: log(A^c)
-            original_expr = f"{log_fmt}\\left(({A})^{{{c}}}\\right)"
-            # Mistake: log(c * A) (Unsimplified to show the error source)
-            mistake_expr = f"{log_fmt}({c} \\cdot {A})"
-            # Correct: c * log(A)
-            correct_expr = f"{c} {log_fmt}({A})"
-
+        # --- Build Solution Steps ---
+        align_lines = []
+        
+        # Step 1: Combine bases
+        align_lines.append(f"{b_str}^{{{exp_sum_str}}} &= {rhs_str}")
+        
+        # Step 2: Set exponents equal
+        align_lines.append(f"{exp_sum_str} &= {p3}")
+        
+        # Step 3: Simplify LHS if there were constants to combine
+        simp_lhs = cx*x + (d1+d2)
+        const_rhs = d3 - d1 - d2
+        
+        if (d1 + d2) != 0:
+            align_lines.append(f"{latex(simp_lhs)} &= {p3}")
+            
+        # Step 4: Isolate x term
+        align_lines.append(f"{latex(cx*x)} &= {const_rhs}")
+            
+        # Step 5: Solve for x (Fixed SageMath Integer Division)
+        ans_x = Integer(const_rhs) / Integer(cx)
+        if ans_x.denominator() == 1:
+            ans_str = str(ans_x.numerator())
+        else:
+            # Format negative fractions cleanly
+            if ans_x < 0:
+                ans_str = f"-\\frac{{{abs(ans_x.numerator())}}}{{{ans_x.denominator()}}}"
+            else:
+                ans_str = f"\\frac{{{ans_x.numerator()}}}{{{ans_x.denominator()}}}"
+                
+        align_lines.append(f"x &= {ans_str}")
+        
+        # Wrap everything in an aligned environment block
+        solution_steps = "\\begin{aligned}\n" + " \\\\ \n".join(align_lines) + "\n\\end{aligned}"
+        
         return {
-            "original_expr": original_expr,
-            "mistake_expr": mistake_expr,
-            "correct_expr": correct_expr
+            "problem": problem_expr,
+            "solution_steps": solution_steps,
+            "ans": ans_str
         }

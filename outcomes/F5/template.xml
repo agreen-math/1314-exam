@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    <intro>
+        <p>Solve for <m>x</m> and identify any extraneous solutions.</p>
+    </intro>
+    <content>
+        <p><me>{{problem}}</me></p>
+        <p>solutions: ____________________</p>
+        <p>extraneous solutions: ____________________</p>
+    </content>
+    <outtro>
+        <p>Solution</p>
+        <p><me>{{solution_steps}}</me></p>
+        <p>
+            Both solutions are valid since substituting either into the original equation results in strictly positive arguments for the logarithms.
+        </p>
+        <p>solutions: <m>\boxed{ {{ans_sol}} }</m></p>
+        <p>extraneous solutions: <m>\boxed{ {{ans_ext}} }</m></p>
+    </outtro>
+</knowl>

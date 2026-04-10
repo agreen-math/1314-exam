@@ -5,48 +5,41 @@ class Generator(BaseGenerator):
     def data(self):
         items = []
         
-        # 1. Base n (Small numerical base 2-9)
-        b = randint(2, 9)
-        y = randint(2, 4)
-        x = b**y
+        # 1. Base e, variable exponent
+        v1 = choice(['x', 'y', 't'])
+        N1 = randint(2, 20)
         items.append({
-            "exp": f"{b}^{{{y}}} = {x}",
-            "log": f"\\log_{{{b}}}({x}) = {y}"
+            "exp": f"e^{{{v1}}} = {N1}",
+            "log": f"\\ln({N1}) = {v1}"
         })
         
-        # 2. Base e (Natural Log)
-        N = randint(10, 99)
-        v = choice(['x', 'y', 't'])
+        # 2. Numeric base, numeric exponent, variable on the left
+        b2 = randint(2, 9)
+        p2 = randint(2, 5)
+        v2 = choice(['r', 'm', 'k'])
         items.append({
-            "exp": f"e^{{{v}}} = {N}",
-            "log": f"\\ln({N}) = {v}"
+            "exp": f"{v2} = {b2}^{{{p2}}}",
+            "log": f"\\log_{{{b2}}}({v2}) = {p2}"
         })
         
-        # 3. Base 10 (Common Log)
-        w = choice(['M', 'N', 'W', 'P'])
-        k = choice(['a', 'b', 'c', 'k'])
+        # 3. Numeric base, numeric exponent, variable on the right
+        b3 = randint(2, 9)
+        p3 = randint(2, 5)
+        v3 = choice(['y', 'w', 'P'])
         items.append({
-            "exp": f"10^{{{k}}} = {w}",
-            "log": f"\\log({w}) = {k}"
+            "exp": f"{b3}^{{{p3}}} = {v3}",
+            "log": f"\\log_{{{b3}}}({v3}) = {p3}"
         })
         
-        # 4. Symbolic Base
-        base_var = choice(['b', 'a', 'm', 'p'])
-        arg_var = choice(['A', 'B', 'X', 'Y'])
-        ans_var = choice(['c', 'd', 'k', 'n'])
-        coeff = randint(1, 4)
-        
-        if coeff == 1:
-            items.append({
-                "exp": f"{base_var}^{{{ans_var}}} = {arg_var}",
-                "log": f"\\log_{{{base_var}}}({arg_var}) = {ans_var}"
-            })
-        else:
-            # Handles the coefficient twist like 2\log_b(A) = c  ->  b^c = A^2
-            items.append({
-                "exp": f"{base_var}^{{{ans_var}}} = {arg_var}^{{{coeff}}}",
-                "log": f"{coeff}\\log_{{{base_var}}}({arg_var}) = {ans_var}"
-            })
+        # 4. Numeric base, variable exponent, evaluable argument
+        b4 = randint(2, 6)
+        p4 = randint(2, 4)
+        N4 = b4**p4  # Evaluated integer (e.g., 3^3 = 27)
+        v4 = choice(['x', 'k', 'n'])
+        items.append({
+            "exp": f"{b4}^{{{v4}}} = {N4}",
+            "log": f"\\log_{{{b4}}}({N4}) = {v4}"
+        })
             
         # Shuffle the order of the 4 items so the types appear in a random sequence
         shuffle(items)

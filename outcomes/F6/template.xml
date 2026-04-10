@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    <intro>
+        <p>A savings account earns <m>{{rate_pct}}\%</m> annual interest compounded {{n_str}}. An initial deposit of ${{P}} is made, where <m>t</m> represents time in years and <m>A(t)</m> represents the account balance in dollars. Determine how long it will take for the account balance to reach ${{A}}, given:</p>
+        <p><me>{{eqn}}</me></p>
+    </intro>
+    <outtro>
+        <p>Solution</p>
+        <p><me>{{solution_steps}}</me></p>
+        <p><m>\boxed{\text{about } {{t_round}} \text{ years}}</m></p>
+    </outtro>
+</knowl>

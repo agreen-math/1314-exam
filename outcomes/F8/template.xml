@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    <intro>
+        <p>
+            Use the table to identify the transformations described by <m>f(x) = {{expr}}</m>. Circle the option that applies and fill in the blanks as appropriate to describe the transformations of the given function. If one does not apply, you may leave it blank. Then sketch the graph of the transformed function on the grid below. Indicate any asymptotes with dashed lines.
+        </p>
+    </intro>
+    <content>
+        <p>
+            <me>
+                \begin{array}{|l|l|}
+                    \hline
+                    \rule[-0.8em]{0pt}{2.2em} \textbf{Horizontal Transformations} &amp; \textbf{Vertical Transformations} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} \text{Reflection: YES    or    NO} &amp; \text{Reflection:        YES    or    NO} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} \text{Dilation: \underline{\hspace{2cm}} times as wide} &amp; \text{Dilation: \underline{\hspace{2cm}} times as tall} \\ \hline
+                    \rule[-1.2em]{0pt}{3em} \text{Translation: \underline{\hspace{2cm}} units LEFT or RIGHT} &amp; \text{Translation: \underline{\hspace{2cm}} units UP or DOWN} \\ \hline
+                \end{array}
+            </me>
+        </p>
+        
+        <p>
+            <me>
+                {{graph_blank}}
+            </me>
+        </p>
+    </content>
+    <outtro>
+        <p>SOLUTION</p>
+        <p><strong>Transformations:</strong></p>
+        <list>
+            <item>
+                <p>
+                    <m>\textbf{Horizontal: } \text{Reflection: {{h_ref}}, Dilation: {{h_dil}}, Shift: {{h_dist}} units {{h_dir}}.}</m>
+                </p>
+            </item>
+            <item>
+                <p>
+                    <m>\textbf{Vertical: } \text{Reflection: {{v_ref}}, Dilation: {{v_dil}}, Shift: {{v_dist}} units {{v_dir}}.}</m>
+                </p>
+            </item>
+        </list>
+        
+        <p><strong>Graph:</strong></p>
+        <p>
+            <me>
+                {{graph_sol}}
+            </me>
+        </p>
+    </outtro>
+</knowl>
