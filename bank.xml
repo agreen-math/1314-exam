@@ -1,89 +1,127 @@
-from sage.all import *
-from random import randint, choice, sample
-
-class Generator(BaseGenerator):
-    def data(self):
-        # 1. Generate Cubic Function Data
-        roots = sample(range(-5, 6), 3)
-        factors = []
-        for r in roots:
-            if r == 0:
-                factors.insert(0, "x")
-            elif r < 0:
-                factors.append(f"(x + {-r})")
-            else:
-                factors.append(f"(x - {r})")
-        cub_expr = "".join(factors)
-        
-        cubic_data = {
-            "expr": cub_expr,
-            "ans_domain": "(-\\infty, \\infty)",
-            "ans_range": "(-\\infty, \\infty)",
-            "domain_expl": "Polynomial functions do not have division by zero or even roots, so their domain is all real numbers.",
-            "domain_math": "\\text{Domain: } (-\\infty, \\infty)",
-            "range_expl": "Since this is an odd-degree polynomial (a cubic), its ends point in opposite directions, meaning the range is also all real numbers.",
-            "range_math": "\\text{Range: } (-\\infty, \\infty)"
-        }
-        
-        # 2. Generate Rational Function Data
-        a = choice([1, 2, 3, 4, 5])
-        b = choice([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5])
-        c = choice([2, 3, 4, 5])
-        d = choice([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5])
-        
-        # Ensure numerator and denominator don't share a common factor
-        while a*d + b == 0:  
-            b = choice([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5])
-        
-        num_a = "" if a == 1 else str(a)
-        num_b = f" + {b}" if b > 0 else f" - {-b}"
-        num_str = f"{num_a}x{num_b}"
-        
-        den_d = f" - {d}" if d > 0 else f" + {-d}"
-        den_str = f"{c}(x{den_d})"
-        
-        rat_expr = f"\\frac{{{num_str}}}{{{den_str}}}"
-        
-        # Evaluate horizontal asymptote fraction cleanly
-        frac = Rational(a, c)
-        if frac.denominator() == 1:
-            rat_range_str = f"{frac.numerator()}"
-            ha_calc = f"y = \\frac{{{a}}}{{{c}}} = {rat_range_str}"
-        else:
-            rat_range_str = f"\\frac{{{frac.numerator()}}}{{{frac.denominator()}}}"
-            if a == frac.numerator() and c == frac.denominator():
-                ha_calc = f"y = \\frac{{{a}}}{{{c}}}"
-            else:
-                ha_calc = f"y = \\frac{{{a}}}{{{c}}} = {rat_range_str}"
-                
-        rat_data = {
-            "expr": rat_expr,
-            "ans_domain": f"x \\neq {d}",
-            "ans_range": f"y \\neq {rat_range_str}",
-            "domain_expl": "The domain is restricted by the denominator, which cannot equal zero.",
-            "domain_math": f"x {den_d} \\neq 0 \\implies x \\neq {d}",
-            "range_expl": "The range is restricted by the horizontal asymptote, which is the ratio of the leading coefficients.",
-            "range_math": f"{ha_calc} \\implies y \\neq {rat_range_str}"
-        }
-        
-        # 3. Shuffle and Assign to parts (a) and (b)
-        items = [cubic_data, rat_data]
-        shuffle(items)
-        
-        return {
-            "expr_a": items[0]["expr"],
-            "ans_domain_a": items[0]["ans_domain"],
-            "ans_range_a": items[0]["ans_range"],
-            "domain_expl_a": items[0]["domain_expl"],
-            "domain_math_a": items[0]["domain_math"],
-            "range_expl_a": items[0]["range_expl"],
-            "range_math_a": items[0]["range_math"],
-            
-            "expr_b": items[1]["expr"],
-            "ans_domain_b": items[1]["ans_domain"],
-            "ans_range_b": items[1]["ans_range"],
-            "domain_expl_b": items[1]["domain_expl"],
-            "domain_math_b": items[1]["domain_math"],
-            "range_expl_b": items[1]["range_expl"],
-            "range_math_b": items[1]["range_math"]
-        }
+<?xml version='1.0' encoding='UTF-8'?>
+<bank xmlns="https://checkit.clontz.org" version="0.2">
+    <title>MC 1314 Midterm Bank SP26</title>
+    <slug>mc-1314-midterm-sp26</slug>
+    <url>https://github.com/agreen-math/1314-midterm</url>
+    <outcomes>
+        <outcome>
+            <title>Eval Func</title>
+            <slug>M1</slug>
+            <path>outcomes/M1</path>
+            <description>
+Evaluate a quadratic function.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Discriminant</title>
+            <slug>M2</slug>
+            <path>outcomes/M2</path>
+            <description>
+Find the discriminant.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Solve Quad w Complex</title>
+            <slug>M3</slug>
+            <path>outcomes/M3</path>
+            <description>
+Solve a quadratic equation with complex solutions.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Solve Rad Eq</title>
+            <slug>M4</slug>
+            <path>outcomes/M4</path>
+            <description>
+Solve a radical equation with no extraneous solutions.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Solve Rational Eq</title>
+            <slug>M5</slug>
+            <path>outcomes/M5</path>
+            <description>
+Solve a rational equation with one extraneous solution.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Inverse</title>
+            <slug>M6</slug>
+            <path>outcomes/M6</path>
+            <description>
+Find the inverse of a cube root function.
+            </description>
+        </outcome>
+        <outcome>
+            <title>ASSESSMENT</title>
+            <slug>M7</slug>
+            <path>outcomes/M7</path>
+            <description>
+ASSESSMENT QUESTION :Find the vertex of a quadratic function (projectile motion application).
+            </description>
+        </outcome>
+        <outcome>
+            <title>Composition</title>
+            <slug>M8</slug>
+            <path>outcomes/M8</path>
+            <description>
+Function Composition
+            </description>
+        </outcome>
+        <outcome>
+            <title>Diff Quot</title>
+            <slug>M9</slug>
+            <path>outcomes/M9</path>
+            <description>
+Difference Quotient
+            </description>
+        </outcome>
+        <outcome>
+            <title>Prop of Quad Func</title>
+            <slug>M10</slug>
+            <path>outcomes/M10</path>
+            <description>
+Properties of Quadratic Functions
+            </description>
+        </outcome>
+        <outcome>
+            <title>Sketch Quad Func</title>
+            <slug>M11</slug>
+            <path>outcomes/M11</path>
+            <description>
+Sketching Quadratic Functions
+            </description>
+        </outcome>
+        <outcome>
+            <title>Transformations</title>
+            <slug>M12</slug>
+            <path>outcomes/M12</path>
+            <description>
+Transformations of Functions
+            </description>
+        </outcome>
+        <outcome>
+            <title>Exp to Log Form</title>
+            <slug>F1</slug>
+            <path>outcomes/F1</path>
+            <description>
+Convert between exponential and logarithmic forms
+            </description>
+        </outcome>
+        <outcome>
+            <title>Log Prop Expand</title>
+            <slug>F2</slug>
+            <path>outcomes/F2</path>
+            <description>
+Expand logarithmic expressions using properties of logarithms.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Log Prop Error</title>
+            <slug>F3</slug>
+            <path>outcomes/F3</path>
+            <description>
+Identify and correct errors in logarithmic expressions.
+            </description>
+        </outcome>    </outcomes>
+</bank>
