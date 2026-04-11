@@ -3,19 +3,33 @@ from random import randint, choice
 
 class Generator(BaseGenerator):
     def data(self):
-        # 1. Randomize parameters (Strictly base 2 or 3)
-        b = choice([2, 3])
-        
-        # 2. Transformations based on reference structure
-        A = choice([-1, 2, 3])
-        
-        H = randint(-8, 8)
-        while H == 0: 
-            H = randint(-8, 8)
+        found = False
+        while not found:
+            # 1. Randomize base (Strictly 2 or 3)
+            b = choice([2, 3])
             
-        K = randint(-8, 8)
-        while K == 0: 
+            # 2. Transformations (Locked to pure shifts, no dilations or reflections)
+            H = randint(-8, 8)
+            while H == 0: 
+                H = randint(-8, 8)
+                
             K = randint(-8, 8)
+            while K == 0: 
+                K = randint(-8, 8)
+                
+            # 3. Visibility Check: Ensure at least 3 integer points fit on a 10x10 grid
+            # For f(x) = log_b(x - H) + K, integer coordinates occur when x - H = b^p 
+            # (which means x = b^p + H) for integer powers p >= 0.
+            visible_points = 0
+            for p in range(0, 6): # Check powers 0 through 5
+                x_val = (b**p) + H
+                y_val = p + K
+                
+                if -10 <= x_val <= 10 and -10 <= y_val <= 10:
+                    visible_points += 1
+                    
+            if visible_points >= 3:
+                found = True
             
         # 3. Format Expression
         if H > 0:
@@ -24,18 +38,13 @@ class Generator(BaseGenerator):
             inner_str = f"x + {abs(H)}" # Shift Left
             
         func_part = f"\\log_{{{b}}}({inner_str})"
-        
-        if A == -1:
-            a_str = "-"
-        else:
-            a_str = f"{A}"
             
         if K > 0:
             k_str = f" + {K}"
         else:
             k_str = f" - {abs(K)}"
             
-        expr = f"{a_str}{func_part}{k_str}"
+        expr = f"{func_part}{k_str}"
         
         # 4. Table Answers
         h_ref_ans = "NO"
@@ -48,8 +57,8 @@ class Generator(BaseGenerator):
             h_trans_dist = f"{abs(H)}"
             h_trans_dir = "LEFT"
             
-        v_ref_ans = "YES" if A < 0 else "NO"
-        v_dil_ans = f"{abs(A)}"
+        v_ref_ans = "NO"
+        v_dil_ans = "1"
         
         if K > 0:
             v_trans_dist = f"{K}"
@@ -78,7 +87,7 @@ class Generator(BaseGenerator):
         domain_end = 10.5
         
         # TikZ natively uses ln(), so we use the change of base formula
-        trans_func_tikz = f"{A} * (ln(\\x - ({H}))/ln({b})) + ({K})"
+        trans_func_tikz = f"(ln(\\x - ({H}))/ln({b})) + ({K})"
             
         graph_sol += f"\\draw[blue, very thick, samples=100, domain={domain_start}:{domain_end}, smooth] plot (\\x, {{{trans_func_tikz}}});"
         graph_sol += r"\end{tikzpicture}"

@@ -1,26 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
     <intro>
-        <p>Suppose a rational function has the attributes in the table below. Using only the holes, asymptotes, and intercepts listed along with as many of the helpful points as required, sketch the graph of the function.</p>
+        <p>Use the graph of the polynomial function <m>f(x)</m> below to answer the questions that follow.</p>
         <p>
             <me>
-                {{table_latex}}
+                {{graph_tikz}}
             </me>
         </p>
     </intro>
     <content>
-        <p>
-            <me>
-                {{graph_blank}}
-            </me>
-        </p>
+        <list>
+            <item><p>(a) Is the degree of the polynomial even or odd? \underline{\hspace{3cm}}</p></item>
+            <item><p>(b) Is the lead coefficient of the polynomial positive or negative? \underline{\hspace{3cm}}</p></item>
+            <item><p>(c) Is the constant of the polynomial positive or negative? \underline{\hspace{3cm}}</p></item>
+            <item><p>(d) What is the minimum degree of the polynomial? \underline{\hspace{3cm}}</p></item>
+        </list>
     </content>
     <outtro>
-        <p>Solution</p>
+        <p>Solution:</p>
+        <list>
+            <item><p>(a) The degree is {{deg_ans}}.</p></item>
+            <item><p>(b) The lead coefficient is {{lead_ans}}.</p></item>
+            <item><p>(c) The constant is {{const_ans}}.</p></item>
+            <item><p>(d) The minimum degree is {{min_deg_ans}}.</p></item>
+        </list>
         <p>
-            <me>
-                {{graph_sol}}
-            </me>
+            <em>(For instructor reference, the function equation is <m>{{equation_latex}}</m>)</em>
         </p>
     </outtro>
 </knowl>
