@@ -5,8 +5,6 @@
     </intro>
     <content>
         <p><me>{{problem}}</me></p>
-        <p>solutions: ____________________</p>
-        <p>extraneous solutions: ____________________</p>
     </content>
     <outtro>
         <p>Solution</p>

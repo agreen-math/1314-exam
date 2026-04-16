@@ -1,15 +1,51 @@
+\documentclass[addpoints]{exam}
+
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\renewcommand*\half{.5}
+
+\setlength\answerlinelength{3in}
+
+%%%%% Question Info %%%%% 
+
+%\printsolutions
+
+%%%%% Header and Footer %%%%% 
+
+\pagestyle{headandfoot}
+\runningheadrule
+\firstpageheader{Math 1314}{Non-Comprehensive Final Exam}{Fall 2025}
+\runningheader{Math 1314}
+{Non-Comprehensive Final Exam}
+{Fall 2025}
+\runningheadrule
+\firstpagefooter{}{}{}
+\runningfooter{}{Page \thepage\ of \numpages}{}
+
+%%%%% Questions %%%%% 
+
+\begin{document}
+
+\uplevel{Number of Questions: \numquestions\hspace{\stretch{1}} Point Total: \numpoints}
+\begin{questions}
 \question[5] 
 Fill in the table to give an equivalent equation in the specified form.
 
- \[\begin{array}{|c|c|} \hline \rule[-0.8em]{0pt}{2.2em} \textbf{Exponential Form} & \textbf{Logarithmic Form} \\ \hline \rule[-1.2em]{0pt}{3em} \hspace{3cm} & \log_{6}(P) = 2 \\ \hline \rule[-1.2em]{0pt}{3em} m = 4^{3} & \hspace{3cm} \\ \hline \rule[-1.2em]{0pt}{3em} \hspace{3cm} & \log_{2}(4) = x \\ \hline \rule[-1.2em]{0pt}{3em} e^{t} = 11 & \hspace{3cm} \\ \hline \end{array}\] 
+ \[{\renewcommand{\arraystretch}{3}
+\begin{array}{|c|c|} \hline  \textbf{Exponential Form} & \textbf{Logarithmic Form} \\ \hline  \hspace{75mm} & \log_{6}(P) = 2 \\ \hline  m = 4^{3} & \hspace{75mm} \\ \hline  \hspace{75mm} & \log_{2}(4) = x \\ \hline  e^{t} = 11 & \hspace{75mm} \\ \hline \end{array}}\] 
 
 \begin{solution}
-\[\begin{array}{|c|c|} \hline \rule[-0.8em]{0pt}{2.2em} \textbf{Exponential Form} & \textbf{Logarithmic Form} \\ \hline \rule[-1.2em]{0pt}{3em} 6^{2} = P & \log_{6}(P) = 2 \\ \hline \rule[-1.2em]{0pt}{3em} m = 4^{3} & \log_{4}(m) = 3 \\ \hline \rule[-1.2em]{0pt}{3em} 2^{x} = 4 & \log_{2}(4) = x \\ \hline \rule[-1.2em]{0pt}{3em} e^{t} = 11 & \ln(11) = t \\ \hline \end{array}\]
+\[{\renewcommand{\arraystretch}{3}
+\begin{array}{|c|c|} \hline  \textbf{Exponential Form} & \textbf{Logarithmic Form} \\ \hline  6^{2} = P & \log_{6}(P) = 2 \\ \hline  m = 4^{3} & \log_{4}(m) = 3 \\ \hline  2^{x} = 4 & \log_{2}(4) = x \\ \hline  e^{t} = 11 & \ln(11) = t \\ \hline \end{array}}\]
 \end{solution}
 
-
-Use properties of logarithms to expand or condense the logarithmic expression as specified.
-\question 
+\question  
 Use properties of logarithms to expand or condense the logarithmic expression as specified.\\
 \begin{parts}
     \part[5] Rewrite as the sum or difference of logarithms. Express all powers as factors.
@@ -22,7 +58,7 @@ Use properties of logarithms to expand or condense the logarithmic expression as
 \[3 + 3\log_{2}(y) - 2 - \log_{2}(z)\]
 
 \[\boxed{ 1 + 3\log_{2}(y) - \log_{2}(z) }\]
-\end{solution}
+\end{solution}  \vspace{\stretch{1}}\answerline
     \part[5] Rewrite as a single logarithm. Express all factors as powers.
 
 \[-\frac{1}{3}\log b + 4\log y + \log z + \log z\]
@@ -33,46 +69,252 @@ Use properties of logarithms to expand or condense the logarithmic expression as
 \[\log\left(\frac{y^{4} z z}{\sqrt[3]{b}}\right)\]
 
 \[\boxed{ \log\left(\frac{y^{4} z^{2}}{\sqrt[3]{b}}\right) }\]
-\end{solution}
+\end{solution}  \vspace{\stretch{1}}\answerline
 \end{parts}
-\vspace{\stretch{1}}\answerline
-
 
 \uplevel{For questions \ref{exact-start} through~\ref{exact-end}, solve for \textbf{all} solutions. Identify any extraneous solutions.}
 \question[6] \label{exact-start}
-Use the table to identify the transformations described by \(f(x) = \log_{2}(x + 1) + 1\). Circle the option that applies and fill in the blanks as appropriate to describe the transformations of the given function. If one does not apply, you may leave it blank. Then sketch the graph of the transformed function on the grid below. Indicate any asymptotes with dashed lines. 
+\[e^{x + 2} \cdot e^{3 \, x + 1} = e^{-1}\]
 
- \[\begin{array}{|l|l|} \hline \rule[-0.8em]{0pt}{2.2em} \textbf{Horizontal Transformations} & \textbf{Vertical Transformations} \\ \hline \rule[-1.2em]{0pt}{3em} \text{Reflection: YES or NO} & \text{Reflection: YES or NO} \\ \hline \rule[-1.2em]{0pt}{3em} \text{Dilation: \underline{\hspace{2cm}} times as wide} & \text{Dilation: \underline{\hspace{2cm}} times as tall} \\ \hline \rule[-1.2em]{0pt}{3em} \text{Translation: \underline{\hspace{2cm}} units LEFT or RIGHT} & \text{Translation: \underline{\hspace{2cm}} units UP or DOWN} \\ \hline \end{array}\] 
+solutions: ____________________
 
- \[\begin{tikzpicture}[scale=0.39] \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10); \draw[thick, <->] (-10.5,0) -- (10.5,0); \draw[thick, <->] (0,-10.5) -- (0,10.5); \end{tikzpicture}\] 
+extraneous solutions: ____________________
 
 \begin{solution}
-\begin{itemize}
-\item
- \(\textbf{Horizontal: } \text{Reflection: NO, Dilation: 1, Shift: 1 units LEFT.}\) 
+\[\begin{aligned} e^{x + 2+3 \, x + 1} &= e^{-1} \\ x + 2+3 \, x + 1 &= -1 \\ 4 \, x + 3 &= -1 \\ 4 \, x &= -4 \\ x &= -1 \end{aligned}\]
+s: \(\boxed{ -1 }\)
 
-\item
- \(\textbf{Vertical: } \text{Reflection: NO, Dilation: 1, Shift: 1 units UP.}\) 
-
-\end{itemize}
-
-
- \[\begin{tikzpicture}[scale=0.39] \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10); \draw[thick, <->] (-10.5,0) -- (10.5,0); \draw[thick, <->] (0,-10.5) -- (0,10.5); \clip (-10.5,-10.5) rectangle (10.5,10.5);\draw[dashed, red, thick] (-1, -10.5) -- (-1, 10.5);\draw[blue, very thick, samples=100, domain=-0.990000000000000:10.5000000000000, smooth] plot (\x, {(ln(\x - (-1))/ln(2)) + (1)});\end{tikzpicture}\]
+extraneous solutions: \(\boxed{ \text{none} }\)
 \end{solution}
 \vspace{\stretch{1}}
 \par solutions: \fillin\fillin \hspace{\stretch{1}} extraneous solutions: \fillin\fillin
-
 
 \question[6] 
-Fill in the table below with the zeros of \(f(x) = 2 \, x^{4} + 7 \, x^{3} + 5 \, x^{2}\), their multiplicities and the behavior of the graph of the function around each zero. You may or may not use all of the rows in the table.
+\[\log_{5}(x + 6) + \log_{5}(x + 2) = 1\]
 
- \[\begin{array}{|c|c|c|} \hline \rule[-0.8em]{0pt}{2.2em} \textbf{Zero} & \textbf{Multiplicity} & \textbf{Behavior} \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \end{array}\] 
+solutions: ____________________
+
+extraneous solutions: ____________________
 
 \begin{solution}
-\[\begin{aligned} f(x) &= 2 \, x^{4} + 7 \, x^{3} + 5 \, x^{2} \\ &= x^2(2 \, x^{2} + 7 \, x + 5) \\ &= x^2(2x + 5)(x + 1) \end{aligned}\]
+\[\begin{aligned} \log_{5}((x + 6)(x + 2)) &= 1 \\ 5 &= (x + 6)(x + 2) \\ 5 &= x^{2} + 8 \, x + 12 \\ 0 &= x^{2} + 8 \, x + 7 \\ 0 &= (x + 1)(x + 7) \end{aligned}\]
 
- \[\begin{array}{|c|c|c|} \hline \rule[-0.8em]{0pt}{2.2em} \textbf{Zero} & \textbf{Multiplicity} & \textbf{Behavior} \\ \hline \rule[-1.2em]{0pt}{3em} -\frac{5}{2} & 1 & \text{cross} \\ \hline \rule[-1.2em]{0pt}{3em} -1 & 1 & \text{cross} \\ \hline \rule[-1.2em]{0pt}{3em} 0 & 2 & \text{bounce} \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \end{array}\]
+ \(x = -1\) is a valid solution, while \(x = -7\) causes a non-positive argument in the original logarithms. 
+s: \(\boxed{ x = -1 }\)
+
+extraneous solutions: \(\boxed{ x = -7 }\)
 \end{solution}
 \vspace{\stretch{1}}
 \par solutions: \fillin\fillin \hspace{\stretch{1}} extraneous solutions: \fillin\fillin
 
+\question[6] \label{exact-end}
+\[\log_{8}(4) + \log_{8}(3x^2) = \log_{8}(300)\]
+
+solutions: ____________________
+
+extraneous solutions: ____________________
+
+\begin{solution}
+\[\begin{aligned} \log_{8}(4 \cdot 3x^2) &= \log_{8}(300) \\ 12x^2 &= 300 \\ x^2 &= 25 \\ x &= \pm 5 \end{aligned}\]
+
+ Both solutions are valid since substituting either into the original equation results in strictly positive arguments for the logarithms. 
+s: \(\boxed{ x = \pm 5 }\)
+
+extraneous solutions: \(\boxed{ \text{none} }\)
+\end{solution}
+\vspace{\stretch{1}}
+\par solutions: \fillin\fillin \hspace{\stretch{1}} extraneous solutions: \fillin\fillin \newpage
+
+\question[6] 
+A savings account earns \(6\%\) annual interest compounded semiannually. An initial deposit of \$2,200 is made, where \(t\) represents time in years and \(A(t)\) represents the account balance in dollars. Determine how long it will take for the account balance to reach \$4,950, given:
+
+\[A(t) = 2,200 \left( 1 + \frac{0.06}{2} \right)^{2t}\]
+
+\begin{solution}
+\[\begin{aligned} 4,950 &= 2,200 \left( 1 + \frac{0.06}{2} \right)^{2t} \\ \frac{9}{4} &= (1.03)^{2t} \\ \log_{1.03}\left(\frac{9}{4}\right) &= 2t \\ \frac{\log_{1.03}\left(\frac{9}{4}\right)}{2} &= t \\ 13.717237... &\approx t \end{aligned}\]
+
+\(\boxed{\text{about } 13.7 \text{ years}}\)
+\end{solution}
+\vspace{\stretch{1}}\answerline \newpage
+
+\question[5] 
+Use the table to identify the transformations described by $f(x)=\log_{2}(x + 1) + 1$. Circle the option that applies and fill in the blanks as appropriate to describe the transformations on the given function. If one does not apply, you may leave it blank. Then sketch the graph of the transformed function on the grid below. Indicate any asymptotes with dashed lines.\\
+\begin{table}[h]
+    \renewcommand{\arraystretch}{3} % Triple spacing
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Horizontal Transformations}               & \textbf{Vertical Transformations}              \\ \hline
+        Reflection: YES    or     NO       & Reflection:       YES    or     NO    \\ \hline
+        Dilation: \underline{\hspace{2cm}} times as wide           & Dilation: \underline{\hspace{2cm}} times as tall        \\ \hline
+        Translation: \underline{\hspace{2cm}} units LEFT or RIGHT & Translation: \underline{\hspace{2cm}} units UP or DOWN \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{center}
+\scalebox{0.75}{
+    \begin{tikzpicture}[>=triangle 45]
+      \draw [step=.5cm, style={black!60}] (-5.4,-5.4) grid (5.4,5.4);
+      \draw [->, line width=2] (-5.5,0) -- (5.5,0); 
+      \draw [->, line width=2] (0,-5.5) -- (0,5.5);
+    \end{tikzpicture}	 }
+\end{center}
+\newpage
+
+\question[5] 
+Use the table to identify the transformations described by $f(x)=2^{x - 1} + 6$. Circle the option that applies and fill in the blanks as appropriate to describe the transformations on the given function. If one does not apply, you may leave it blank. Then sketch the graph of the transformed function on the grid below. Indicate any asymptotes with dashed lines.\\
+\begin{table}[h]
+    \renewcommand{\arraystretch}{3} % Triple spacing
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Horizontal Transformations}               & \textbf{Vertical Transformations}              \\ \hline
+        Reflection: YES    or     NO       & Reflection:       YES    or     NO    \\ \hline
+        Dilation: \underline{\hspace{2cm}} times as wide           & Dilation: \underline{\hspace{2cm}} times as tall        \\ \hline
+        Translation: \underline{\hspace{2cm}} units LEFT or RIGHT & Translation: \underline{\hspace{2cm}} units UP or DOWN \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{center}
+\scalebox{0.75}{
+    \begin{tikzpicture}[>=triangle 45]
+      \draw [step=.5cm, style={black!60}] (-5.4,-5.4) grid (5.4,5.4);
+      \draw [->, line width=2] (-5.5,0) -- (5.5,0); 
+      \draw [->, line width=2] (0,-5.5) -- (0,5.5);
+    \end{tikzpicture}	 }
+\end{center}
+\newpage
+
+\question[6] 
+A coffee shop is selling lattes and muffins. On the first day of sales, they sold 40 lattes and 15 muffins for a total of \$410. They took in \$620 for 40 lattes and 30 muffins on the second day. Find the price of each type of item.\vspace{\stretch{1}}\\ 
+
+latte: \fillin \hspace{\stretch{1}} muffin: \fillin
+
+\begin{solution}
+\[\begin{aligned} \text{Let } l &\text{ = price of latte} \\ \text{Let } m &\text{ = price of muffin} \\ \\ 40l + 15m &= 410 \\ 40l + 30m &= 620 \\ \\ \text{Subtract equations:} & \\ 15m &= 210 \\ m &= 14 \\ \\ \text{Substitute back:} & \\ 40l + 15(14) &= 410 \\ 40l + 210 &= 410 \\ 40l &= 200 \\ l &= 5 \end{aligned}\]
+
+latte: \(\boxed{ \text{\$} 5 }\)
+
+muffin: \(\boxed{ \text{\$} 14 }\)
+\end{solution}
+\newpage
+
+\question[4] 
+Write the following system as an augmented matrix.
+
+\[\begin{aligned} 25y &= 23 - 11x \\ -4x - 17 &= -20y \end{aligned}\]
+
+\begin{solution}
+\[\begin{aligned} 11x + 25y &= 23 \\ -4x + 20y &= 17 \end{aligned}\]
+
+\[\boxed{ \left[\begin{array}{cc|c} 11 & 25 & 23 \\ -4 & 20 & 17 \end{array}\right] }\]
+\end{solution}
+\vspace{\stretch{1}}
+
+\question[6] 
+Solve the following system using row operations on matrices.
+
+\[\left[\begin{array}{cc|c} -4 & 14 & 126 \\ 1 & -3 & -27 \end{array}\right]\]
+
+\begin{solution}
+\[\begin{aligned} & \left[\begin{array}{cc|c} -4 & 14 & 126 \\ 1 & -3 & -27 \end{array}\right] \\ \xrightarrow{R_1 \leftrightarrow R_2} & \left[\begin{array}{cc|c} 1 & -3 & -27 \\ -4 & 14 & 126 \end{array}\right] \\ \xrightarrow{R_2 + 4R_1 \to R_2} & \left[\begin{array}{cc|c} 1 & -3 & -27 \\ 0 & 2 & 18 \end{array}\right] \\ \xrightarrow{\frac{R_2}{2} \to R_2} & \left[\begin{array}{cc|c} 1 & -3 & -27 \\ 0 & 1 & 9 \end{array}\right] \\ \xrightarrow{R_1 + 3R_2 \to R_1} & \left[\begin{array}{cc|c} 1 & 0 & 0 \\ 0 & 1 & 9 \end{array}\right] \end{aligned}\]
+
+\(\boxed{ (0, 9) }\)
+\end{solution}
+\vspace{\stretch{5}}\answerline \newpage
+
+\question  
+Find the domain and range for each of the following functions.\\
+\begin{parts}
+    \part[5] \(g(x) = x(x + 2)(x - 4)\)
+
+\vspace{\stretch{1}}\\ domain:\fillin[\boxed{solution}][2in] \hspace{\stretch{1}} range:\fillin[\boxed{solution}][2in]
+
+\begin{solution}
+\[\text{Domain: } (-\infty, \infty)\]
+
+domain: \(\boxed{ (-\infty, \infty) }\)
+
+\[\text{Range: } (-\infty, \infty)\]
+
+range: \(\boxed{ (-\infty, \infty) }\)
+\end{solution} \newpage
+    \part[5] \(h(x) = \displaystyle \frac{2x - 3}{2(x - 3)}\)
+
+\vspace{\stretch{1}}\\ domain:\fillin[\boxed{solution}][2in] \hspace{\stretch{1}} range:\fillin[\boxed{solution}][2in]
+
+\begin{solution}
+\[x - 3 \neq 0 \implies x \neq 3\]
+
+domain: \(\boxed{ x \neq 3 }\)
+
+\[y = \frac{2}{2} = 2 \implies y \neq 2\]
+
+range: \(\boxed{ y \neq 2 }\)
+\end{solution} \newpage
+\end{parts}
+
+\question[5] 
+List all of the vertical, horizontal, and oblique asymptotes of $f(x)=\frac{4x + 2}{3(x - 1)}$.\\
+\begin{center}
+\renewcommand{\arraystretch}{3}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Asymptotes}  & \textbf{Equation} \\ \hline
+        Vertical   & \hspace{50mm}         \\ \hline
+        Horizontal &          \\ \hline
+        Oblique    &          \\ \hline
+    \end{tabular}
+\end{center}
+\vspace{\stretch{1}}
+
+\question[10] 
+Fill in the table below with the zeros of $f(x)=2 \, x^{4} + 7 \, x^{3} + 5 \, x^{2}$, their multiplicities and the behavior of the graph of the function around each zero. You may or may not use all of the rows in the table.\\
+\begin{center}
+\renewcommand{\arraystretch}{3}
+\begin{tabular}{|p{20mm}|p{25mm}|p{20mm}|}\hline
+\textbf{Zero} & \textbf{Multiplicity} & \textbf{Behavior}\\ \hline
+ & & \\ \hline
+ & & \\ \hline
+ & & \\ \hline
+ & & \\ \hline
+ & & \\ \hline
+\end{tabular}
+\end{center}
+\newpage
+
+\question[5] 
+Suppose a rational function has the attributes in the table below. Using only the holes, asymptotes, and intercepts listed along with as many of the helpful points as required, sketch the graph of the function.\\
+\[\renewcommand{\arraystretch}{1.4} \begin{array}{|r|c|c|} \hline \textbf{Holes:} & (-2, -1.6) & \\ \hline \textbf{Asymptotes:} & x = -5 & x = 3 \\ & y = 4 & \\ \hline \textbf{Intercepts:} & (4, 0) & (-1, 0) \\ & (0, 1.07) & \\ \hline \textbf{Helpful Points:} & (-9, 8.67) & (2.5, 5.6) \\ & (7, 2) & \\ \hline \end{array}\]
+
+\vspace{12pt}
+
+\scalebox{1}{
+    \begin{tikzpicture}[>=triangle 45]
+      \draw [step=.5cm, style={black!60}] (-5.4,-5.4) grid (5.4,5.4);
+      \draw [->, line width=2] (-5.5,0) -- (5.5,0); 
+      \draw [->, line width=2] (0,-5.5) -- (0,5.5);
+    \end{tikzpicture}	 }
+\newpage
+
+\question 
+Use the image of a polynomial below to answer the questions that follow.\\
+\[\begin{tikzpicture}[scale=0.39] \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10); \draw[thick, <->] (-10.5,0) -- (10.5,0); \draw[thick, <->] (0,-10.5) -- (0,10.5); \clip (-11,-11) rectangle (11,11); \draw[<->, blue, very thick, samples=150, domain=-2.98:5.94, smooth] plot (\x, {-0.019999 * (\x + 2.5) * (\x - 1) * (\x - 2.5) * (\x - 3.5) * (\x - 4.5)}); \end{tikzpicture}\]
+
+\begin{parts}
+    \part[1] Is the degree of the polynomial even or odd? \\\\\begin{oneparcheckboxes}
+    \choice even
+    \choice odd
+    \end{oneparcheckboxes}\\\vspace{.125in}
+    \part[1\half] Is the lead coefficient of the polynomial positive or negative?\\\\ \begin{oneparcheckboxes}
+    \choice positive
+    \choice negative
+    \end{oneparcheckboxes}\\\vspace{.125in}
+    \part[1] Is the constant of the polynomial positive or negative? \\\\\begin{oneparcheckboxes}
+    \choice positive
+    \choice negative
+    \end{oneparcheckboxes}\\\vspace{.125in}
+    \part[1\half] What is the minimum degree? \\\\\fillin
+\end{parts}
+\end{questions}
+\end{document}

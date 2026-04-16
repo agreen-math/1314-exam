@@ -6,8 +6,6 @@
     <knowl>
         <content>
             <p>(a) <m>g(x) = {{expr_a}}</m></p>
-            <p>domain: ____________________</p>
-            <p>range: ____________________</p>
         </content>
         <outtro>
             <p>Solution</p>
@@ -20,8 +18,6 @@
     <knowl>
         <content>
             <p>(b) <m>h(x) = {{expr_b}}</m></p>
-            <p>domain: ____________________</p>
-            <p>range: ____________________</p>
         </content>
         <outtro>
             <p>Solution</p>

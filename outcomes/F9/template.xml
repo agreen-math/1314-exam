@@ -3,10 +3,6 @@
     <intro>
         <p>{{problem}}</p>
     </intro>
-    <content>
-        <p>{{sing1}}: ____________________</p>
-        <p>{{sing2}}: ____________________</p>
-    </content>
     <outtro>
         <p>Solution</p>
         <p><me>{{solution_steps}}</me></p>
