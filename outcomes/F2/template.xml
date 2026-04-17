@@ -5,8 +5,8 @@
     </intro>
     <knowl>
         <content>
-            <p>(a) Rewrite as the sum or difference of logarithms. Express all powers as factors.</p>
-            <p><me>{{expr_a}}</me></p>
+            <p>Rewrite as the sum or difference of logarithms. Express all powers as factors.</p>
+            <p><m>{{expr_a}}</m></p>
         </content>
         <outtro>
             <p>Solution</p>
@@ -17,8 +17,8 @@
     </knowl>
     <knowl>
         <content>
-            <p>(b) Rewrite as a single logarithm. Express all factors as powers.</p>
-            <p><me>{{expr_b}}</me></p>
+            <p>Rewrite as a single logarithm. Express all factors as powers.</p>
+            <p><m>{{expr_b}}</m></p>
         </content>
         <outtro>
             <p>Solution</p>

@@ -4,7 +4,7 @@
         <p>Solve the following system using row operations on matrices.</p>
     </intro>
     <content>
-        <p><me>{{initial_matrix}}</me></p>
+        <p><m>{{initial_matrix}}</m></p>
     </content>
     <outtro>
         <p>Solution</p>

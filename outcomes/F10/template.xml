@@ -4,7 +4,7 @@
         <p>Write the following system as an augmented matrix.</p>
     </intro>
     <content>
-        <p><me>{{system}}</me></p>
+        <p><m>{{system}}</m></p>
     </content>
     <outtro>
         <p>Solution</p>

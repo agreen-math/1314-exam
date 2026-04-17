@@ -1,11 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Welcome to Overleaf --- just edit your LaTeX on the left,
-% and we'll compile it for you on the right. If you open the
-% 'Share' menu, you can invite other users to edit at the same
-% time. See www.overleaf.com/learn for more info. Enjoy!
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[11pt]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -16,7 +8,7 @@
 CheckIt Assessment
 }
 \newcommand{\assessmentVersion}{
-Version 1776364598316
+Version 1776433144954
 }
 \newcommand{\assessmentInstructions}{
 Do not use any unapproved aids while taking this assessment.
@@ -70,12 +62,12 @@ in the space provided.
 \stxKnowl{
 Fill in the table to give an equivalent equation in the specified form.
 
- \[\begin{array}{|c|c|} \hline \rule[-0.8em]{0pt}{2.2em} \textbf{Exponential Form} & \textbf{Logarithmic Form} \\ \hline \rule[-1.2em]{0pt}{3em} \hspace{3cm} & \log_{6}(P) = 2 \\ \hline \rule[-1.2em]{0pt}{3em} m = 4^{3} & \hspace{3cm} \\ \hline \rule[-1.2em]{0pt}{3em} \hspace{3cm} & \log_{2}(4) = x \\ \hline \rule[-1.2em]{0pt}{3em} e^{t} = 11 & \hspace{3cm} \\ \hline \end{array}\] 
+ \[\begin{array}{|c|c|} \hline \rule[-0.8em]{0pt}{2.2em} \textbf{Exponential Form} & \textbf{Logarithmic Form} \\ \hline \rule[-1.2em]{0pt}{3em} \hspace{3cm} & \log_{6}(y) = 2 \\ \hline \rule[-1.2em]{0pt}{3em} \hspace{3cm} & \ln(11) = t \\ \hline \rule[-1.2em]{0pt}{3em} r = 6^{2} & \hspace{3cm} \\ \hline \rule[-1.2em]{0pt}{3em} 2^{x} = 4 & \hspace{3cm} \\ \hline \end{array}\] 
 
 \stxOuttro{
 Solution
 
- \[\begin{array}{|c|c|} \hline \rule[-0.8em]{0pt}{2.2em} \textbf{Exponential Form} & \textbf{Logarithmic Form} \\ \hline \rule[-1.2em]{0pt}{3em} 6^{2} = P & \log_{6}(P) = 2 \\ \hline \rule[-1.2em]{0pt}{3em} m = 4^{3} & \log_{4}(m) = 3 \\ \hline \rule[-1.2em]{0pt}{3em} 2^{x} = 4 & \log_{2}(4) = x \\ \hline \rule[-1.2em]{0pt}{3em} e^{t} = 11 & \ln(11) = t \\ \hline \end{array}\] 
+ \[\begin{array}{|c|c|} \hline \rule[-0.8em]{0pt}{2.2em} \textbf{Exponential Form} & \textbf{Logarithmic Form} \\ \hline \rule[-1.2em]{0pt}{3em} 6^{2} = y & \log_{6}(y) = 2 \\ \hline \rule[-1.2em]{0pt}{3em} e^{t} = 11 & \ln(11) = t \\ \hline \rule[-1.2em]{0pt}{3em} r = 6^{2} & \log_{6}(r) = 2 \\ \hline \rule[-1.2em]{0pt}{3em} 2^{x} = 4 & \log_{2}(4) = x \\ \hline \end{array}\] 
 
 }
 }
@@ -99,16 +91,16 @@ Use properties of logarithms to expand or condense the logarithmic expression as
 \stxKnowl{
 (a) Rewrite as the sum or difference of logarithms. Express all powers as factors.
 
-\[\log_{2}\left( \frac{8y^{3}}{4z} \right)\]
+\[\log_{5}\left( \frac{625w^{3}}{5x} \right)\]
 
 \stxOuttro{
 Solution
 
-\[\log_{2}(8) + 3\log_{2}(y) - \log_{2}(4) - \log_{2}(z)\]
+\[\log_{5}(625) + 3\log_{5}(w) - \log_{5}(5) - \log_{5}(x)\]
 
-\[3 + 3\log_{2}(y) - 2 - \log_{2}(z)\]
+\[4 + 3\log_{5}(w) - 1 - \log_{5}(x)\]
 
-\[\boxed{ 1 + 3\log_{2}(y) - \log_{2}(z) }\]
+\[\boxed{ 3 + 3\log_{5}(w) - \log_{5}(x) }\]
 
 }
 }
@@ -117,16 +109,16 @@ Solution
 \stxKnowl{
 (b) Rewrite as a single logarithm. Express all factors as powers.
 
-\[-\frac{1}{3}\log b + 4\log y + \log z + \log z\]
+\[3\ln x - \frac{1}{2}\ln y - 2\ln x - 2\ln z\]
 
 \stxOuttro{
 Solution
 
-\[-\log(b^{1/3}) + \log(y^{4}) + \log(z) + \log(z)\]
+\[\ln(x^{3}) - \ln(y^{1/2}) - \ln(x^{2}) - \ln(z^{2})\]
 
-\[\log\left(\frac{y^{4} z z}{\sqrt[3]{b}}\right)\]
+\[\ln\left(\frac{x^{3}}{\sqrt{y} x^{2} z^{2}}\right)\]
 
-\[\boxed{ \log\left(\frac{y^{4} z^{2}}{\sqrt[3]{b}}\right) }\]
+\[\boxed{ \ln\left(\frac{x}{\sqrt{y} z^{2}}\right) }\]
 
 }
 }
@@ -148,18 +140,14 @@ Solution
 \stxKnowl{
 Solve for \(x\) and identify any extraneous solutions.
 
-\[e^{x + 2} \cdot e^{3 \, x + 1} = e^{-1}\]
-
-solutions: ____________________
-
-extraneous solutions: ____________________
+\[e^{-2 \, x - 1} \cdot e^{3 \, x - 2} = e^{-3}\]
 
 \stxOuttro{
 Solution
 
-\[\begin{aligned} e^{x + 2+3 \, x + 1} &= e^{-1} \\ x + 2+3 \, x + 1 &= -1 \\ 4 \, x + 3 &= -1 \\ 4 \, x &= -4 \\ x &= -1 \end{aligned}\]
+\[\begin{aligned} e^{-2 \, x - 1+3 \, x - 2} &= e^{-3} \\ -2 \, x - 1+3 \, x - 2 &= -3 \\ x - 3 &= -3 \\ x &= 0 \\ x &= 0 \end{aligned}\]
 
-solutions: \(\boxed{ -1 }\)
+solutions: \(\boxed{ 0 }\)
 
 extraneous solutions: \(\boxed{ \text{none} }\)
 
@@ -180,22 +168,18 @@ extraneous solutions: \(\boxed{ \text{none} }\)
 \stxKnowl{
 Solve for \(x\) and identify any extraneous solutions.
 
-\[\log_{5}(x + 6) + \log_{5}(x + 2) = 1\]
-
-solutions: ____________________
-
-extraneous solutions: ____________________
+\[\log_{3}(x + 1) + \log_{3}(x - 1) = 1\]
 
 \stxOuttro{
 Solution
 
-\[\begin{aligned} \log_{5}((x + 6)(x + 2)) &= 1 \\ 5 &= (x + 6)(x + 2) \\ 5 &= x^{2} + 8 \, x + 12 \\ 0 &= x^{2} + 8 \, x + 7 \\ 0 &= (x + 1)(x + 7) \end{aligned}\]
+\[\begin{aligned} \log_{3}((x + 1)(x - 1)) &= 1 \\ 3 &= (x + 1)(x - 1) \\ 3 &= x^{2} - 1 \\ 0 &= x^{2} - 4 \\ 0 &= (x - 2)(x + 2) \end{aligned}\]
 
- \(x = -1\) is a valid solution, while \(x = -7\) causes a non-positive argument in the original logarithms. 
+ \(x = 2\) is a valid solution, while \(x = -2\) causes a non-positive argument in the original logarithms. 
 
-solutions: \(\boxed{ x = -1 }\)
+solutions: \(\boxed{ x = 2 }\)
 
-extraneous solutions: \(\boxed{ x = -7 }\)
+extraneous solutions: \(\boxed{ x = -2 }\)
 
 }
 }
@@ -214,20 +198,16 @@ extraneous solutions: \(\boxed{ x = -7 }\)
 \stxKnowl{
 Solve for \(x\) and identify any extraneous solutions.
 
-\[\log_{8}(4) + \log_{8}(3x^2) = \log_{8}(300)\]
-
-solutions: ____________________
-
-extraneous solutions: ____________________
+\[\ln(5) + \ln(2x^2) = \ln(40)\]
 
 \stxOuttro{
 Solution
 
-\[\begin{aligned} \log_{8}(4 \cdot 3x^2) &= \log_{8}(300) \\ 12x^2 &= 300 \\ x^2 &= 25 \\ x &= \pm 5 \end{aligned}\]
+\[\begin{aligned} \ln(5 \cdot 2x^2) &= \ln(40) \\ 10x^2 &= 40 \\ x^2 &= 4 \\ x &= \pm 2 \end{aligned}\]
 
  Both solutions are valid since substituting either into the original equation results in strictly positive arguments for the logarithms. 
 
-solutions: \(\boxed{ x = \pm 5 }\)
+solutions: \(\boxed{ x = \pm 2 }\)
 
 extraneous solutions: \(\boxed{ \text{none} }\)
 
@@ -246,16 +226,16 @@ extraneous solutions: \(\boxed{ \text{none} }\)
 \renewcommand{\stxOuttro}[1]{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \stxKnowl{
-A savings account earns \(6\%\) annual interest compounded semiannually. An initial deposit of $2,200 is made, where \(t\) represents time in years and \(A(t)\) represents the account balance in dollars. Determine how long it will take for the account balance to reach $4,950, given:
+A savings account earns \(12\%\) annual interest compounded monthly. An initial deposit of $2,800 is made, where \(t\) represents time in years and \(A(t)\) represents the account balance in dollars. Determine how long it will take for the account balance to reach $3,500, given:
 
-\[A(t) = 2,200 \left( 1 + \frac{0.06}{2} \right)^{2t}\]
+\[A(t) = 2,800 \left( 1 + \frac{0.12}{12} \right)^{12t}\]
 
 \stxOuttro{
 Solution
 
-\[\begin{aligned} 4,950 &= 2,200 \left( 1 + \frac{0.06}{2} \right)^{2t} \\ \frac{9}{4} &= (1.03)^{2t} \\ \log_{1.03}\left(\frac{9}{4}\right) &= 2t \\ \frac{\log_{1.03}\left(\frac{9}{4}\right)}{2} &= t \\ 13.717237... &\approx t \end{aligned}\]
+\[\begin{aligned} 3,500 &= 2,800 \left( 1 + \frac{0.12}{12} \right)^{12t} \\ \frac{5}{4} &= (1.01)^{12t} \\ \log_{1.01}\left(\frac{5}{4}\right) &= 12t \\ \frac{\log_{1.01}\left(\frac{5}{4}\right)}{12} &= t \\ 1.868812... &\approx t \end{aligned}\]
 
-\(\boxed{\text{about } 13.7 \text{ years}}\)
+\(\boxed{\text{about } 1.9 \text{ years}}\)
 
 }
 }
@@ -272,7 +252,7 @@ Solution
 \renewcommand{\stxOuttro}[1]{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \stxKnowl{
- Use the table to identify the transformations described by \(f(x) = \log_{2}(x + 1) + 1\). Circle the option that applies and fill in the blanks as appropriate to describe the transformations of the given function. If one does not apply, you may leave it blank. Then sketch the graph of the transformed function on the grid below. Indicate any asymptotes with dashed lines. 
+ Use the table to identify the transformations described by \(f(x) = \log_{2}(x - 6) - 7\). Circle the option that applies and fill in the blanks as appropriate to describe the transformations of the given function. If one does not apply, you may leave it blank. Then sketch the graph of the transformed function on the grid below. Indicate any asymptotes with dashed lines. 
 
  \[\begin{array}{|l|l|} \hline \rule[-0.8em]{0pt}{2.2em} \textbf{Horizontal Transformations} & \textbf{Vertical Transformations} \\ \hline \rule[-1.2em]{0pt}{3em} \text{Reflection: YES or NO} & \text{Reflection: YES or NO} \\ \hline \rule[-1.2em]{0pt}{3em} \text{Dilation: \underline{\hspace{2cm}} times as wide} & \text{Dilation: \underline{\hspace{2cm}} times as tall} \\ \hline \rule[-1.2em]{0pt}{3em} \text{Translation: \underline{\hspace{2cm}} units LEFT or RIGHT} & \text{Translation: \underline{\hspace{2cm}} units UP or DOWN} \\ \hline \end{array}\] 
 
@@ -285,15 +265,15 @@ SOLUTION
 
 \begin{itemize}
 \item
- \(\textbf{Horizontal: } \text{Reflection: NO, Dilation: 1, Shift: 1 units LEFT.}\) 
+ \(\textbf{Horizontal: } \text{Reflection: NO, Dilation: 1, Shift: 6 units RIGHT.}\) 
 
 \item
- \(\textbf{Vertical: } \text{Reflection: NO, Dilation: 1, Shift: 1 units UP.}\) 
+ \(\textbf{Vertical: } \text{Reflection: NO, Dilation: 1, Shift: 7 units DOWN.}\) 
 
 \end{itemize}
 
 
- \[\begin{tikzpicture}[scale=0.39] \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10); \draw[thick, <->] (-10.5,0) -- (10.5,0); \draw[thick, <->] (0,-10.5) -- (0,10.5); \clip (-10.5,-10.5) rectangle (10.5,10.5);\draw[dashed, red, thick] (-1, -10.5) -- (-1, 10.5);\draw[blue, very thick, samples=100, domain=-0.990000000000000:10.5000000000000, smooth] plot (\x, {(ln(\x - (-1))/ln(2)) + (1)});\end{tikzpicture}\] 
+ \[\begin{tikzpicture}[scale=0.39] \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10); \draw[thick, <->] (-10.5,0) -- (10.5,0); \draw[thick, <->] (0,-10.5) -- (0,10.5); \clip (-10.5,-10.5) rectangle (10.5,10.5);\draw[dashed, red, thick] (6, -10.5) -- (6, 10.5);\draw[blue, very thick, samples=100, domain=6.01000000000000:10.5000000000000, smooth] plot (\x, {(ln(\x - (6))/ln(2)) + (-7)});\end{tikzpicture}\] 
 
 }
 }
@@ -310,7 +290,7 @@ SOLUTION
 \renewcommand{\stxOuttro}[1]{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \stxKnowl{
- Use the table to identify the transformations described by \(f(x) = 2^{x - 1} + 6\). Circle the option that applies and fill in the blanks as appropriate to describe the transformations of the given function. If one does not apply, you may leave it blank. Then sketch the graph of the transformed function on the grid below. Indicate any asymptotes with dashed lines. 
+ Use the table to identify the transformations described by \(f(x) = 2^{x - 4} - 3\). Circle the option that applies and fill in the blanks as appropriate to describe the transformations of the given function. If one does not apply, you may leave it blank. Then sketch the graph of the transformed function on the grid below. Indicate any asymptotes with dashed lines. 
 
  \[\begin{array}{|l|l|} \hline \rule[-0.8em]{0pt}{2.2em} \textbf{Horizontal Transformations} & \textbf{Vertical Transformations} \\ \hline \rule[-1.2em]{0pt}{3em} \text{Reflection: YES or NO} & \text{Reflection: YES or NO} \\ \hline \rule[-1.2em]{0pt}{3em} \text{Dilation: \underline{\hspace{2cm}} times as wide} & \text{Dilation: \underline{\hspace{2cm}} times as tall} \\ \hline \rule[-1.2em]{0pt}{3em} \text{Translation: \underline{\hspace{2cm}} units LEFT or RIGHT} & \text{Translation: \underline{\hspace{2cm}} units UP or DOWN} \\ \hline \end{array}\] 
 
@@ -323,15 +303,15 @@ SOLUTION
 
 \begin{itemize}
 \item
- \(\textbf{Horizontal: } \text{Reflection: NO, Dilation: 1, Shift: 1 units RIGHT.}\) 
+ \(\textbf{Horizontal: } \text{Reflection: NO, Dilation: 1, Shift: 4 units RIGHT.}\) 
 
 \item
- \(\textbf{Vertical: } \text{Reflection: NO, Dilation: 1, Shift: 6 units UP.}\) 
+ \(\textbf{Vertical: } \text{Reflection: NO, Dilation: 1, Shift: 3 units DOWN.}\) 
 
 \end{itemize}
 
 
- \[\begin{tikzpicture}[scale=0.39] \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10); \draw[thick, <->] (-10.5,0) -- (10.5,0); \draw[thick, <->] (0,-10.5) -- (0,10.5); \clip (-10.5,-10.5) rectangle (10.5,10.5);\draw[dashed, red, thick] (-10.5, 6) -- (10.5, 6);\draw[blue, very thick, samples=100, domain=-10.5000000000000:5.643856189774724, smooth] plot (\x, {pow(2, \x - (1)) + (6)});\end{tikzpicture}\] 
+ \[\begin{tikzpicture}[scale=0.39] \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10); \draw[thick, <->] (-10.5,0) -- (10.5,0); \draw[thick, <->] (0,-10.5) -- (0,10.5); \clip (-10.5,-10.5) rectangle (10.5,10.5);\draw[dashed, red, thick] (-10.5, -3) -- (10.5, -3);\draw[blue, very thick, samples=100, domain=-10.5000000000000:8.643856189774723, smooth] plot (\x, {pow(2, \x - (4)) + (-3)});\end{tikzpicture}\] 
 
 }
 }
@@ -348,20 +328,16 @@ SOLUTION
 \renewcommand{\stxOuttro}[1]{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \stxKnowl{
-A coffee shop is selling lattes and muffins. On the first day of sales, they sold 40 lattes and 15 muffins for a total of $410. They took in $620 for 40 lattes and 30 muffins on the second day. Find the price of each type of item.
-
-latte: ____________________
-
-muffin: ____________________
+A coffee shop is selling lattes and muffins. On the first day of sales, they sold 20 lattes and 5 muffins for a total of $200. They took in $360 for 20 lattes and 15 muffins on the second day. Find the price of each type of item.
 
 \stxOuttro{
 Solution
 
-\[\begin{aligned} \text{Let } l &\text{ = price of latte} \\ \text{Let } m &\text{ = price of muffin} \\ \\ 40l + 15m &= 410 \\ 40l + 30m &= 620 \\ \\ \text{Subtract equations:} & \\ 15m &= 210 \\ m &= 14 \\ \\ \text{Substitute back:} & \\ 40l + 15(14) &= 410 \\ 40l + 210 &= 410 \\ 40l &= 200 \\ l &= 5 \end{aligned}\]
+\[\begin{aligned} \text{Let } l &\text{ = price of latte} \\ \text{Let } m &\text{ = price of muffin} \\ \\ 20l + 5m &= 200 \\ 20l + 15m &= 360 \\ \\ \text{Subtract equations:} & \\ 10m &= 160 \\ m &= 16 \\ \\ \text{Substitute back:} & \\ 20l + 5(16) &= 200 \\ 20l + 80 &= 200 \\ 20l &= 120 \\ l &= 6 \end{aligned}\]
 
-latte: \(\boxed{ \text{\$} 5 }\)
+latte: \(\boxed{ \text{\$} 6 }\)
 
-muffin: \(\boxed{ \text{\$} 14 }\)
+muffin: \(\boxed{ \text{\$} 16 }\)
 
 }
 }
@@ -380,14 +356,14 @@ muffin: \(\boxed{ \text{\$} 14 }\)
 \stxKnowl{
 Write the following system as an augmented matrix.
 
-\[\begin{aligned} 25y &= 23 - 11x \\ -4x - 17 &= -20y \end{aligned}\]
+\[\begin{aligned} 0 &= -2y - 14 + 15x \\ 18x - 8 &= -22y \end{aligned}\]
 
 \stxOuttro{
 Solution
 
-\[\begin{aligned} 11x + 25y &= 23 \\ -4x + 20y &= 17 \end{aligned}\]
+\[\begin{aligned} -15x + 2y &= -14 \\ 18x + 22y &= 8 \end{aligned}\]
 
-\[\boxed{ \left[\begin{array}{cc|c} 11 & 25 & 23 \\ -4 & 20 & 17 \end{array}\right] }\]
+\[\boxed{ \left[\begin{array}{cc|c} -15 & 2 & -14 \\ 18 & 22 & 8 \end{array}\right] }\]
 
 }
 }
@@ -406,14 +382,14 @@ Solution
 \stxKnowl{
 Solve the following system using row operations on matrices.
 
-\[\left[\begin{array}{cc|c} -4 & 14 & 126 \\ 1 & -3 & -27 \end{array}\right]\]
+\[\left[\begin{array}{cc|c} 3 & -12 & -9 \\ 1 & -3 & -1 \end{array}\right]\]
 
 \stxOuttro{
 Solution
 
-\[\begin{aligned} & \left[\begin{array}{cc|c} -4 & 14 & 126 \\ 1 & -3 & -27 \end{array}\right] \\ \xrightarrow{R_1 \leftrightarrow R_2} & \left[\begin{array}{cc|c} 1 & -3 & -27 \\ -4 & 14 & 126 \end{array}\right] \\ \xrightarrow{R_2 + 4R_1 \to R_2} & \left[\begin{array}{cc|c} 1 & -3 & -27 \\ 0 & 2 & 18 \end{array}\right] \\ \xrightarrow{\frac{R_2}{2} \to R_2} & \left[\begin{array}{cc|c} 1 & -3 & -27 \\ 0 & 1 & 9 \end{array}\right] \\ \xrightarrow{R_1 + 3R_2 \to R_1} & \left[\begin{array}{cc|c} 1 & 0 & 0 \\ 0 & 1 & 9 \end{array}\right] \end{aligned}\]
+\[\begin{aligned} & \left[\begin{array}{cc|c} 3 & -12 & -9 \\ 1 & -3 & -1 \end{array}\right] \\ \xrightarrow{R_1 \leftrightarrow R_2} & \left[\begin{array}{cc|c} 1 & -3 & -1 \\ 3 & -12 & -9 \end{array}\right] \\ \xrightarrow{R_2 - 3R_1 \to R_2} & \left[\begin{array}{cc|c} 1 & -3 & -1 \\ 0 & -3 & -6 \end{array}\right] \\ \xrightarrow{\frac{R_2}{-3} \to R_2} & \left[\begin{array}{cc|c} 1 & -3 & -1 \\ 0 & 1 & 2 \end{array}\right] \\ \xrightarrow{R_1 + 3R_2 \to R_1} & \left[\begin{array}{cc|c} 1 & 0 & 5 \\ 0 & 1 & 2 \end{array}\right] \end{aligned}\]
 
-\(\boxed{ (0, 9) }\)
+\(\boxed{ (5, 2) }\)
 
 }
 }
@@ -435,11 +411,25 @@ Find the domain and range for each of the following functions.
 \begin{enumerate}
 \item
 \stxKnowl{
-(a) \(g(x) = x(x + 2)(x - 4)\)
+(a) \(g(x) = \displaystyle \frac{3x - 2}{3(x + 5)}\)
 
-domain: ____________________
+\stxOuttro{
+Solution
 
-range: ____________________
+\[x + 5 \neq 0 \implies x \neq -5\]
+
+domain: \(\boxed{ x \neq -5 }\)
+
+\[y = \frac{3}{3} = 3 \implies y \neq 3\]
+
+range: \(\boxed{ y \neq 3 }\)
+
+}
+}
+
+\item
+\stxKnowl{
+(b) \(h(x) = (x + 5)(x - 4)(x - 2)\)
 
 \stxOuttro{
 Solution
@@ -451,28 +441,6 @@ domain: \(\boxed{ (-\infty, \infty) }\)
 \[\text{Range: } (-\infty, \infty)\]
 
 range: \(\boxed{ (-\infty, \infty) }\)
-
-}
-}
-
-\item
-\stxKnowl{
-(b) \(h(x) = \displaystyle \frac{2x - 3}{2(x - 3)}\)
-
-domain: ____________________
-
-range: ____________________
-
-\stxOuttro{
-Solution
-
-\[x - 3 \neq 0 \implies x \neq 3\]
-
-domain: \(\boxed{ x \neq 3 }\)
-
-\[y = \frac{2}{2} = 2 \implies y \neq 2\]
-
-range: \(\boxed{ y \neq 2 }\)
 
 }
 }
@@ -494,7 +462,7 @@ range: \(\boxed{ y \neq 2 }\)
 \stxKnowl{
 List all of the vertical, horizontal, and oblique asymptotes of \(f(x)\).
 
-\[f(x) = \frac{4x + 2}{3(x - 1)}\]
+\[f(x) = \frac{4x - 1}{2(x - 1)}\]
 
  \[\begin{array}{|c|c|} \hline \rule[-0.8em]{0pt}{2.2em} \textbf{Asymptotes} & \textbf{Equation} \\ \hline \rule[-1.2em]{0pt}{3em} \text{Vertical} & \text{\hspace{4cm}} \\ \hline \rule[-1.2em]{0pt}{3em} \text{Horizontal} & \text{\hspace{4cm}} \\ \hline \rule[-1.2em]{0pt}{3em} \text{Oblique} & \text{\hspace{4cm}} \\ \hline \end{array}\] 
 
@@ -518,16 +486,16 @@ Solution
 \renewcommand{\stxOuttro}[1]{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \stxKnowl{
-Fill in the table below with the zeros of \(f(x) = 2 \, x^{4} + 7 \, x^{3} + 5 \, x^{2}\), their multiplicities and the behavior of the graph of the function around each zero. You may or may not use all of the rows in the table.
+Fill in the table below with the zeros of \(f(x) = 3 \, x^{4} - x^{3} - 2 \, x^{2}\), their multiplicities and the behavior of the graph of the function around each zero. You may or may not use all of the rows in the table.
 
  \[\begin{array}{|c|c|c|} \hline \rule[-0.8em]{0pt}{2.2em} \textbf{Zero} & \textbf{Multiplicity} & \textbf{Behavior} \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \end{array}\] 
 
 \stxOuttro{
 Solution
 
-\[\begin{aligned} f(x) &= 2 \, x^{4} + 7 \, x^{3} + 5 \, x^{2} \\ &= x^2(2 \, x^{2} + 7 \, x + 5) \\ &= x^2(2x + 5)(x + 1) \end{aligned}\]
+\[\begin{aligned} f(x) &= 3 \, x^{4} - x^{3} - 2 \, x^{2} \\ &= x^2(3 \, x^{2} - x - 2) \\ &= x^2(3x + 2)(x - 1) \end{aligned}\]
 
- \[\begin{array}{|c|c|c|} \hline \rule[-0.8em]{0pt}{2.2em} \textbf{Zero} & \textbf{Multiplicity} & \textbf{Behavior} \\ \hline \rule[-1.2em]{0pt}{3em} -\frac{5}{2} & 1 & \text{cross} \\ \hline \rule[-1.2em]{0pt}{3em} -1 & 1 & \text{cross} \\ \hline \rule[-1.2em]{0pt}{3em} 0 & 2 & \text{bounce} \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \end{array}\] 
+ \[\begin{array}{|c|c|c|} \hline \rule[-0.8em]{0pt}{2.2em} \textbf{Zero} & \textbf{Multiplicity} & \textbf{Behavior} \\ \hline \rule[-1.2em]{0pt}{3em} -\frac{2}{3} & 1 & \text{cross} \\ \hline \rule[-1.2em]{0pt}{3em} 0 & 2 & \text{bounce} \\ \hline \rule[-1.2em]{0pt}{3em} 1 & 1 & \text{cross} \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \rule[-1.2em]{0pt}{3em} & & \\ \hline \end{array}\] 
 
 }
 }
@@ -546,14 +514,16 @@ Solution
 \stxKnowl{
 Suppose a rational function has the attributes in the table below. Using only the holes, asymptotes, and intercepts listed along with as many of the helpful points as required, sketch the graph of the function.
 
- \[\renewcommand{\arraystretch}{1.4} \begin{array}{|r|c|c|} \hline \textbf{Holes:} & (-2, -1.6) & \\ \hline \textbf{Asymptotes:} & x = -5 & x = 3 \\ & y = 4 & \\ \hline \textbf{Intercepts:} & (4, 0) & (-1, 0) \\ & (0, 1.07) & \\ \hline \textbf{Helpful Points:} & (-9, 8.67) & (2.5, 5.6) \\ & (7, 2) & \\ \hline \end{array}\] 
+ \[\renewcommand{\arraystretch}{1.4} \begin{array}{|r|c|c|} \hline \textbf{Holes:} & (3, -2.57) & \\ \hline \textbf{Asymptotes:} & x = -4 & x = 5 \\ & y = -2 & \\ \hline \textbf{Intercepts:} & (-3, 0) & (6, 0) \\ & (0, -1.8) & \\ \hline \textbf{Helpful Points:} & (-6.5, -3.04) & (4, -3.5) \\ & (7, -0.91) & \\ \hline \end{array}\] 
 
  \[\begin{tikzpicture}[scale=0.39] \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10); \draw[thick, <->] (-10.5,0) -- (10.5,0); \draw[thick, <->] (0,-10.5) -- (0,10.5); \end{tikzpicture}\] 
 
 \stxOuttro{
 Solution
 
- \[\begin{tikzpicture}[scale=0.39] \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10); \draw[thick, <->] (-10.5,0) -- (10.5,0); \draw[thick, <->] (0,-10.5) -- (0,10.5); \clip (-10.5,-10.5) rectangle (10.5,10.5);\draw[dashed, blue, thick, <->] (-5, -10.5) -- (-5, 10.5); \draw[dashed, blue, thick, <->] (3, -10.5) -- (3, 10.5); \draw[dashed, blue, thick, <->] (-10.5, 4) -- (10.5, 4); \draw[blue, very thick, samples=80, domain=-10.5:-5.10000000000000, smooth] plot (\x, {4 * (\x - (4)) * (\x - (-1)) / ((\x - (-5)) * (\x - (3)))}); \draw[blue, very thick, samples=80, domain=-4.90000000000000:2.90000000000000, smooth] plot (\x, {4 * (\x - (4)) * (\x - (-1)) / ((\x - (-5)) * (\x - (3)))}); \draw[blue, very thick, samples=80, domain=3.10000000000000:10.5, smooth] plot (\x, {4 * (\x - (4)) * (\x - (-1)) / ((\x - (-5)) * (\x - (3)))}); \fill[blue] (4.0, 0) circle (4pt); \fill[blue] (-1.0, 0) circle (4pt); \fill[blue] (0, 1.07) circle (4pt); \fill[blue] (-9.0, 8.67) circle (4pt); \fill[blue] (2.5, 5.6) circle (4pt); \fill[blue] (7.0, 2.0) circle (4pt); \draw[blue, thick, fill=white] (-2.0, -1.6) circle (4pt); \end{tikzpicture}\] 
+ \textbf{Instructor Note:} The generated function is: \[f(x) = \frac{-2(x - 6)(x + 3)(x - 3)}{(x + 4)(x - 5)(x - 3)}\] 
+
+ \[\begin{tikzpicture}[scale=0.39] \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10); \draw[thick, <->] (-10.5,0) -- (10.5,0); \draw[thick, <->] (0,-10.5) -- (0,10.5); \clip (-10.5,-10.5) rectangle (10.5,10.5);\draw[dashed, blue, thick, <->] (-4, -10.5) -- (-4, 10.5); \draw[dashed, blue, thick, <->] (5, -10.5) -- (5, 10.5); \draw[dashed, blue, thick, <->] (-10.5, -2) -- (10.5, -2); \draw[blue, very thick, samples=80, domain=-10.5:-4.10000000000000, smooth] plot (\x, {-2 * (\x - (6)) * (\x - (-3)) / ((\x - (-4)) * (\x - (5)))}); \draw[blue, very thick, samples=80, domain=-3.90000000000000:4.90000000000000, smooth] plot (\x, {-2 * (\x - (6)) * (\x - (-3)) / ((\x - (-4)) * (\x - (5)))}); \draw[blue, very thick, samples=80, domain=5.10000000000000:10.5, smooth] plot (\x, {-2 * (\x - (6)) * (\x - (-3)) / ((\x - (-4)) * (\x - (5)))}); \fill[blue] (-3.0, 0) circle (4pt); \fill[blue] (6.0, 0) circle (4pt); \fill[blue] (0, -1.8) circle (4pt); \fill[blue] (-6.5, -3.04) circle (4pt); \fill[blue] (4.0, -3.5) circle (4pt); \fill[blue] (7.0, -0.91) circle (4pt); \draw[blue, thick, fill=white] (3.0, -2.57) circle (4pt); \end{tikzpicture}\] 
 
 }
 }
@@ -572,20 +542,20 @@ Solution
 \stxKnowl{
 Use the graph of the polynomial function \(f(x)\) below to answer the questions that follow.
 
- \[\begin{tikzpicture}[scale=0.39] \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10); \draw[thick, <->] (-10.5,0) -- (10.5,0); \draw[thick, <->] (0,-10.5) -- (0,10.5); \clip (-11,-11) rectangle (11,11); \draw[<->, blue, very thick, samples=150, domain=-2.98:5.94, smooth] plot (\x, {-0.019999 * (\x + 2.5) * (\x - 1) * (\x - 2.5) * (\x - 3.5) * (\x - 4.5)}); \end{tikzpicture}\] 
+ \[\begin{tikzpicture}[scale=0.39] \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10); \draw[thick, <->] (-10.5,0) -- (10.5,0); \draw[thick, <->] (0,-10.5) -- (0,10.5); \clip (-11,-11) rectangle (11,11); \draw[<->, blue, very thick, samples=150, domain=-2.07:5.82, smooth] plot (\x, {-0.118881 * (\x + 1.5) * (\x - 2) * (\x - 3.5) * (\x - 4.5)}); \end{tikzpicture}\] 
 
 \begin{itemize}
 \item
-(a) Is the degree of the polynomial even or odd? \underline{\hspace{3cm}}
+(a) Is the degree of the polynomial even or odd?
 
 \item
-(b) Is the lead coefficient of the polynomial positive or negative? \underline{\hspace{3cm}}
+(b) Is the lead coefficient of the polynomial positive or negative?
 
 \item
-(c) Is the constant of the polynomial positive or negative? \underline{\hspace{3cm}}
+(c) Is the constant of the polynomial positive or negative?
 
 \item
-(d) What is the minimum degree of the polynomial? \underline{\hspace{3cm}}
+(d) What is the minimum degree of the polynomial?
 
 \end{itemize}
 \stxOuttro{
@@ -593,19 +563,19 @@ Solution:
 
 \begin{itemize}
 \item
-(a) The degree is odd.
+(a) The degree is even.
 
 \item
 (b) The lead coefficient is negative.
 
 \item
-(c) The constant is negative.
+(c) The constant is positive.
 
 \item
-(d) The minimum degree is 5.
+(d) The minimum degree is 4.
 
 \end{itemize}
- \textbf{(For instructor reference, the function equation is \(-0.02(x + 2.5)(x - 1)(x - 2.5)(x - 3.5)(x - 4.5)\))} 
+ \textbf{(For instructor reference, the function equation is \(-0.1189(x + 1.5)(x - 2)(x - 3.5)(x - 4.5)\))} 
 
 }
 }

@@ -5,7 +5,7 @@
     </intro>
     <knowl>
         <content>
-            <p>(a) <m>g(x) = {{expr_a}}</m></p>
+            <p><m>g(x) = {{expr_a}}</m></p>
         </content>
         <outtro>
             <p>Solution</p>
@@ -17,7 +17,7 @@
     </knowl>
     <knowl>
         <content>
-            <p>(b) <m>h(x) = {{expr_b}}</m></p>
+            <p><m>h(x) = {{expr_b}}</m></p>
         </content>
         <outtro>
             <p>Solution</p>

@@ -21,7 +21,7 @@ class Generator(BaseGenerator):
         den_d = f" - {d}" if d > 0 else f" + {-d}"
         den_str = f"{c}(x{den_d})"
         
-        expr = f"\\frac{{{num_str}}}{{{den_str}}}"
+        expr = f"\\displaystyle{{\\frac{{{num_str}}}{{{den_str}}}}}"
         
         # 3. Calculate and format horizontal asymptote
         frac = Rational(a, c)

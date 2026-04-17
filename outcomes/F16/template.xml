@@ -10,19 +10,19 @@
     </intro>
     <content>
         <list>
-            <item><p>(a) Is the degree of the polynomial even or odd?</p></item>
-            <item><p>(b) Is the lead coefficient of the polynomial positive or negative?</p></item>
-            <item><p>(c) Is the constant of the polynomial positive or negative?</p></item>
-            <item><p>(d) What is the minimum degree of the polynomial?</p></item>
+            <item><p>Is the degree of the polynomial even or odd?</p></item>
+            <item><p>Is the lead coefficient of the polynomial positive or negative?</p></item>
+            <item><p>Is the constant of the polynomial positive or negative?</p></item>
+            <item><p>What is the minimum degree of the polynomial?</p></item>
         </list>
     </content>
     <outtro>
         <p>Solution:</p>
         <list>
-            <item><p>(a) The degree is {{deg_ans}}.</p></item>
-            <item><p>(b) The lead coefficient is {{lead_ans}}.</p></item>
-            <item><p>(c) The constant is {{const_ans}}.</p></item>
-            <item><p>(d) The minimum degree is {{min_deg_ans}}.</p></item>
+            <item><p>The degree is {{deg_ans}}.</p></item>
+            <item><p>The lead coefficient is {{lead_ans}}.</p></item>
+            <item><p>The constant is {{const_ans}}.</p></item>
+            <item><p>The minimum degree is {{min_deg_ans}}.</p></item>
         </list>
         <p>
             <em>(For instructor reference, the function equation is <m>{{equation_latex}}</m>)</em>
