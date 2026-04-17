@@ -23,8 +23,8 @@ class Generator(BaseGenerator):
         
         expr = f"\\displaystyle{{\\frac{{{num_str}}}{{{den_str}}}}}"
         
-        # 3. Calculate and format horizontal asymptote
-        frac = Rational(a, c)
+        # 3. Calculate and format horizontal asymptote using QQ to avoid the base conversion trap
+        frac = QQ(a) / QQ(c)
         if frac.denominator() == 1:
             ha_val = f"{frac.numerator()}"
         else:

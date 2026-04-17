@@ -45,7 +45,7 @@ class Generator(BaseGenerator):
         rat_expr = f"\\displaystyle \\frac{{{num_str}}}{{{den_str}}}"
         
         # Evaluate horizontal asymptote fraction cleanly
-        frac = Rational(a, c)
+        frac = QQ(a) / QQ(c)
         if frac.denominator() == 1:
             rat_range_str = f"{frac.numerator()}"
             ha_calc = f"y = \\frac{{{a}}}{{{c}}} = {rat_range_str}"

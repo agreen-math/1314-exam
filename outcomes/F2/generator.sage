@@ -25,7 +25,7 @@ class Generator(BaseGenerator):
         q_str = f"^{{{q}}}" if q > 1 else ""
         
         # Construct expressions
-        expr_a = f"\\log_{{{b}}}\\left( \\frac{{{A}{v1}^{{{p}}}}}{{{B}{v2}{q_str}}} \\right)"
+        expr_a = f"\\displaystyle{{\\log_{{{b}}}\\left( \\frac{{{A}{v1}^{{{p}}}}}{{{B}{v2}{q_str}}} \\right)}}"
         
         q_log_str = f"{q}\\log_{{{b}}}({v2})" if q > 1 else f"\\log_{{{b}}}({v2})"
         
@@ -79,7 +79,7 @@ class Generator(BaseGenerator):
             if abs_val == 1 and not is_rad:
                 coeff_str = ""
             elif is_rad:
-                coeff_str = f"\\frac{{1}}{{{comp['rad_idx']}}}"
+                coeff_str = f"\\displaystyle{{\\frac{{1}}{{{comp['rad_idx']}}}}}"
             else:
                 coeff_str = str(abs_val)
                 
@@ -127,9 +127,9 @@ class Generator(BaseGenerator):
         den_str = " ".join(den_factors) if den_factors else "1"
         
         if den_str == "1":
-            step2_b = f"{base_func}\\left({num_str}\\right)"
+            step2_b = f"{base_func}\\left(\\displaystyle{{ {num_str} }}\\right)"
         else:
-            step2_b = f"{base_func}\\left(\\frac{{{num_str}}}{{{den_str}}}\\right)"
+            step2_b = f"{base_func}\\left(\\displaystyle{{\\frac{{{num_str}}}{{{den_str}}}}}\\right)"
             
         # --- Final Answer Formatting (Simplified Fraction) ---
         ans_num = []
@@ -157,9 +157,9 @@ class Generator(BaseGenerator):
         ans_den_str = " ".join(ans_den) if ans_den else "1"
         
         if ans_den_str == "1":
-            ans_b = f"{base_func}\\left({ans_num_str}\\right)"
+            ans_b = f"{base_func}\\left(\\displaystyle{{ {ans_num_str} }}\\right)"
         else:
-            ans_b = f"{base_func}\\left(\\frac{{{ans_num_str}}}{{{ans_den_str}}}\\right)"
+            ans_b = f"{base_func}\\left(\\displaystyle{{\\frac{{{ans_num_str}}}{{{ans_den_str}}}}}\\right)"
             
         return {
             "expr_a": expr_a,

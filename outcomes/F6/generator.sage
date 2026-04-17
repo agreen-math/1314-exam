@@ -51,7 +51,7 @@ class Generator(BaseGenerator):
 
         # 6. Build Equation String
         eqn_rhs = f"{P_str} \\left( 1 + \\frac{{{r_dec}}}{{{n_val}}} \\right)^{{{n_val}t}}"
-        eqn = f"A(t) = {eqn_rhs}"
+        eqn = f"\\displaystyle{{A(t) = {eqn_rhs}}}"
 
         # 7. Build Step-by-Step Solution 
         align_lines = []
