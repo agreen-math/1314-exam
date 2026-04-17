@@ -500,10 +500,10 @@ PREAMBLE = r"""\documentclass[addpoints]{exam}
 
 \pagestyle{headandfoot}
 \runningheadrule
-\firstpageheader{Math 1314}{Non-Comprehensive Final Exam}{Fall 2025}
+\firstpageheader{Math 1314}{Non-Comprehensive Final Exam}{Spring 2026}
 \runningheader{Math 1314}
 {Non-Comprehensive Final Exam}
-{Fall 2025}
+{Spring 2026}
 \runningheadrule
 \firstpagefooter{}{}{}
 \runningfooter{}{Page \thepage\ of \numpages}{}
