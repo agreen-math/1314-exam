@@ -89,17 +89,17 @@ class Generator(BaseGenerator):
             opens = "Down"
 
         # --- Generate TikZ Code ---
-        grid_color = "gray!40"
+        grid_color = "black!60"
         curve_color = "blue!80!black"
         point_color = "blue"
         
         tikz = r"""
-        \begin{tikzpicture}[scale=0.35]
-            \draw[step=1cm, """ + grid_color + r""", very thin] (-10,-10) grid (10,10);
-            \draw[thick, <->] (-10.5,0) -- (10.5,0);
-            \draw[thick, <->] (0,-10.5) -- (0,10.5);
+        \begin{tikzpicture}[scale=0.35,>=triangle 45]
+            \draw[step=1cm, """ + grid_color + r"""] (-10,-10) grid (10,10);
+            \draw[very thick, <->] (-10.5,0) -- (10.5,0);
+            \draw[very thick, <->] (0,-10.5) -- (0,10.5);
             \clip (-10,-10) rectangle (10,10);
-            \draw[line width=1.5pt, """ + curve_color + r""", samples=100, domain=-10:10, <->] 
+            \draw[line width=2pt, """ + curve_color + r""", samples=100, domain=-10:10, <->] 
                 plot (\x, {""" + f"{float(a)}*(\\x - {h})^2 + {k}" + r"""});
             \fill[""" + point_color + r"""] (""" + f"{h},{k}" + r""") circle (7pt);
             \fill[""" + point_color + r"""] (""" + f"{x1},0" + r""") circle (7pt);
@@ -110,10 +110,10 @@ class Generator(BaseGenerator):
         """
 
         blank_grid = r"""
-        \begin{tikzpicture}[scale=0.35]
-            \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10);
-            \draw[thick, <->] (-10.5,0) -- (10.5,0);
-            \draw[thick, <->] (0,-10.5) -- (0,10.5);
+        \begin{tikzpicture}[scale=0.35,>=triangle 45]
+            \draw[step=1cm, """ + grid_color + r"""] (-10,-10) grid (10,10);
+            \draw[very thick, <->] (-10.5,0) -- (10.5,0);
+            \draw[very thick, <->] (0,-10.5) -- (0,10.5);
         \end{tikzpicture}
         """
 

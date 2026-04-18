@@ -69,16 +69,16 @@ class Generator(BaseGenerator):
 
         # 5. TikZ Graphing Setup
         grid_setup = r"""
-            \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10);
-            \draw[thick, <->] (-10.5,0) -- (10.5,0);
-            \draw[thick, <->] (0,-10.5) -- (0,10.5);
+            \draw[step=1cm, black!60] (-10,-10) grid (10,10);
+            \draw[very thick, <->] (-10.5,0) -- (10.5,0);
+            \draw[very thick, <->] (0,-10.5) -- (0,10.5);
         """
         
         # --- Blank Graph ---
-        graph_blank = r"\begin{tikzpicture}[scale=0.39]" + grid_setup + r"\end{tikzpicture}"
+        graph_blank = r"\begin{tikzpicture}[scale=0.39,>=triangle 45]" + grid_setup + r"\end{tikzpicture}"
         
         # --- Solution Graph ---
-        graph_sol = r"\begin{tikzpicture}[scale=0.39]" + grid_setup
+        graph_sol = r"\begin{tikzpicture}[scale=0.39,>=triangle 45]" + grid_setup
         graph_sol += r"\clip (-10.5,-10.5) rectangle (10.5,10.5);"
         graph_sol += f"\\draw[dashed, red, thick] ({H}, -10.5) -- ({H}, 10.5);"
         

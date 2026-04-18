@@ -189,20 +189,20 @@ class Generator(BaseGenerator):
 
         # --- TikZ Graphing Setup ---
         grid_setup = r"""
-            \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10);
-            \draw[thick, <->] (-10.5,0) -- (10.5,0);
-            \draw[thick, <->] (0,-10.5) -- (0,10.5);
+            \draw[step=1cm, black!60] (-10,-10) grid (10,10);
+            \draw[very thick, <->] (-10.5,0) -- (10.5,0);
+            \draw[very thick, <->] (0,-10.5) -- (0,10.5);
         """
         
-        graph_blank = r"\begin{tikzpicture}[scale=0.39]" + grid_setup + r"\end{tikzpicture}"
+        graph_blank = r"\begin{tikzpicture}[scale=0.39,>=triangle 45]" + grid_setup + r"\end{tikzpicture}"
         
-        graph_sol = r"\begin{tikzpicture}[scale=0.39]" + grid_setup
+        graph_sol = r"\begin{tikzpicture}[scale=0.39,>=triangle 45]" + grid_setup
         graph_sol += r"\clip (-10.5,-10.5) rectangle (10.5,10.5);"
         
         # Draw Asymptotes
-        graph_sol += f"\\draw[dashed, blue, thick, <->] ({v1}, -10.5) -- ({v1}, 10.5);\n"
-        graph_sol += f"\\draw[dashed, blue, thick, <->] ({v2}, -10.5) -- ({v2}, 10.5);\n"
-        graph_sol += f"\\draw[dashed, blue, thick, <->] (-10.5, {ha}) -- (10.5, {ha});\n"
+        graph_sol += f"\\draw[dashed, blue, very thick, <->] ({v1}, -10.5) -- ({v1}, 10.5);\n"
+        graph_sol += f"\\draw[dashed, blue, very thick, <->] ({v2}, -10.5) -- ({v2}, 10.5);\n"
+        graph_sol += f"\\draw[dashed, blue, very thick, <->] (-10.5, {ha}) -- (10.5, {ha});\n"
         
         # TikZ function evaluated using PGFMath natively
         tikz_func = f"{d} * (\\x - ({r1})) * (\\x - ({r2})) / ((\\x - ({v1})) * (\\x - ({v2})))"
@@ -230,7 +230,7 @@ class Generator(BaseGenerator):
         graph_sol += f"\\fill[blue] ({tkz_pt(p3)}, {tkz_pt(func(p3))}) circle (4pt);\n"
         
         # Draw Hole
-        graph_sol += f"\\draw[blue, thick, fill=white] ({tkz_pt(h)}, {tkz_pt(y_h)}) circle (4pt);\n"
+        graph_sol += f"\\draw[blue, very thick, fill=white] ({tkz_pt(h)}, {tkz_pt(y_h)}) circle (4pt);\n"
 
         graph_sol += r"\end{tikzpicture}"
 

@@ -101,20 +101,20 @@ class Generator(BaseGenerator):
             return dots
 
         grid_setup = r"""
-            \draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10);
-            \draw[thick, <->] (-10.5,0) -- (10.5,0);
-            \draw[thick, <->] (0,-10.5) -- (0,10.5);
+            \draw[step=1cm, black!60] (-10,-10) grid (10,10);
+            \draw[very thick, <->] (-10.5,0) -- (10.5,0);
+            \draw[very thick, <->] (0,-10.5) -- (0,10.5);
         """
 
         # Scale 0.39 matches your previous setting
-        graph_orig = r"\begin{tikzpicture}[scale=0.39]" + grid_setup
+        graph_orig = r"\begin{tikzpicture}[scale=0.39,>=triangle 45]" + grid_setup
         graph_orig += plot_coords(base_points, "black")
         graph_orig += plot_dots(base_points, "black")
         graph_orig += r"\end{tikzpicture}"
         
-        graph_blank = r"\begin{tikzpicture}[scale=0.39]" + grid_setup + r"\end{tikzpicture}"
+        graph_blank = r"\begin{tikzpicture}[scale=0.39,>=triangle 45]" + grid_setup + r"\end{tikzpicture}"
         
-        graph_sol = r"\begin{tikzpicture}[scale=0.39]" + grid_setup
+        graph_sol = r"\begin{tikzpicture}[scale=0.39,>=triangle 45]" + grid_setup
         graph_sol += plot_coords(new_points, "blue")
         graph_sol += plot_dots(new_points, "blue")
         graph_sol += r"\end{tikzpicture}"

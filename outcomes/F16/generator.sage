@@ -92,10 +92,10 @@ class Generator(BaseGenerator):
         # TikZ graphing code 
         # Clip expanded to 11 to give the physical arrowheads plenty of room to render fully
         graph_tikz = (
-            "\\begin{tikzpicture}[scale=0.39]\n"
-            "  \\draw[step=1cm, gray!40, very thin] (-10,-10) grid (10,10);\n"
-            "  \\draw[thick, <->] (-10.5,0) -- (10.5,0);\n"
-            "  \\draw[thick, <->] (0,-10.5) -- (0,10.5);\n"
+            "\\begin{tikzpicture}[scale=0.39,>=triangle 45]\n"
+            "  \\draw[step=1cm, black!60] (-10,-10) grid (10,10);\n"
+            "  \\draw[very thick, <->] (-10.5,0) -- (10.5,0);\n"
+            "  \\draw[very thick, <->] (0,-10.5) -- (0,10.5);\n"
             "  \\clip (-11,-11) rectangle (11,11);\n"
             f"  \\draw[<->, blue, very thick, samples=150, domain={domain_start}:{domain_end}, smooth] plot (\\x, {{{trans_func_tikz}}});\n"
             "\\end{tikzpicture}"
